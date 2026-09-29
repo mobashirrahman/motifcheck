@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "all_balance_thresholds_met": false,
+    "effective_sample_size_fraction": 0.55185,
+    "effective_sample_size_min": 0.5,
+    "identical_paired_inputs": true,
+    "max_context_proportion_diff": 0.00574,
+    "n_attempts": 3,
+    "only_loss_weights_differ": true,
+    "rows_excluded_unsupported": 401,
+    "smd_gc": 0.05267,
+    "smd_log1p_tpm": 0.13752
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": null,
+  "data_hash": null,
+  "detail": {
+    "residual_balance_diagnostics": {
+      "n_A": {
+        "smd": -1.86564
+      },
+      "n_C": {
+        "smd": 1.22953
+      },
+      "n_G": {
+        "smd": -1.35896
+      },
+      "n_U": {
+        "smd": 1.6919
+      },
+      "note": "diagnostics only per protocol section 7; they are not additional hidden matching requirements"
+    }
+  },
+  "evidence_paths": [
+    "reports/intervention_qc.json"
+  ],
+  "gate": "G5",
+  "status": "fail",
+  "timestamp_utc": "2026-09-29T18:41:04+00:00",
+  "warnings": [
+    "401 training rows lacked common support and were excluded from both conditions; the estimand is narrowed accordingly"
+  ]
+}

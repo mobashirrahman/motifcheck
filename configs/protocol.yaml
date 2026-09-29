@@ -1,0 +1,429 @@
+# MotifCheck protocol — frozen before any model fitting.
+# Derived from MotifCheck_Implementation_Plan.md v1.0 (2026-09-29).
+# Deviations from the plan are recorded in `amendments` and are the ONLY
+# permitted departures. Any change after G0 must append a new amendment.
+
+protocol_version: "1.0.0"
+plan_reference: "MotifCheck_Implementation_Plan.md v1.0 (2026-09-29)"
+frozen_at: "2026-09-29"
+
+# ---------------------------------------------------------------------------
+# Amendments: documented, justified departures from the plan text.
+# ---------------------------------------------------------------------------
+amendments:
+  - id: A1
+    section: "4.3"
+    plan_says: "Prefer up to 10,000 positive windows and 40,000 background windows."
+    reality: >-
+      The released GRCh38 IDR reproducible peak file for ENCSR981WKN contains
+      only 7,797 peaks, so 10,000 positives are not obtainable from public data.
+    change: >-
+      Positives are capped at min(10000, n_reproducible_peaks). Background is
+      drawn at 4x the realized positive count, preserving the planned 1:4
+      ratio rather than the planned absolute count.
+    rationale: "Keeps the prespecified ratio; only the absolute scale is forced."
+  - id: A2
+    section: "4.1 / 6 / 4.3"
+    plan_says: >-
+      "The associated size-matched input/control metadata and usable processed
+      control signal when available" and baseline B2 uses "eligible
+      input-coverage features"; background may be restricted by "processed
+      input coverage".
+    reality: >-
+      ENCSR981WKN releases alignments, signal bigWigs, peaks and fastq only.
+      No processed size-matched input/control bigWig is released for this
+      experiment, and no control experiment is linked from its files.
+    change: >-
+      The input-coverage feature is dropped from baseline B2 and the
+      input-coverage observability filter is disabled. Input signal is recorded
+      as an explicitly unavailable column in the data card. B2 therefore uses
+      context + log1p TPM only, and is relabelled accordingly.
+    rationale: >-
+      Plan section 4.1 forbids treating an absent input file as zero coverage.
+      Encoding a missing control as a zero-valued feature would be exactly that
+      prohibited substitution, so the feature is removed rather than faked.
+  - id: A3
+    section: "4.1 / 8.2"
+    plan_says: "An experimentally determined human PTBP1 motif from CisBP-RNA."
+    reality: >-
+      cisbp.org/rna redirects to cisbp-rna.ccbr.utoronto.ca, a PHP application
+      with no REST API. The documented endpoints all return HTTP 404. The PWM
+      files are reachable only through the web application.
+    change: >-
+      Motifs are fetched from the CisBP-RNA build 2.00 PWM file directory, with
+      motif id, study, assay type and Direct/Inferred status recorded verbatim
+      in the source manifest. Primary motif is fixed before scoring.
+    rationale: "Provenance is preserved; only the transport mechanism differs."
+  - id: A4
+    section: "4.1"
+    plan_says: "Use GRCh38 sequence and gene annotation on the same assembly; public K562 RNA-seq gene quantification for the observable candidate universe."
+    reality: >-
+      GENCODE v49 annotation and an ENCODE K562 RSEM transcript quantification
+      are used. These are the versions available and are pinned by checksum.
+    change: >-
+      Annotation is GENCODE v49 basic protein-coding on GRCh38. Expression is
+      the pinned ENCODE K562 RSEM quantification listed in the manifest.
+    rationale: "Single assembly is maintained; versions are pinned and recorded."
+  - id: A5
+    section: "7 / 10 / 13"
+    plan_says: >-
+      "If thresholds fail, revise strata/weights on training data only, with at
+      most two documented attempts. Otherwise conclude that the balancing
+      intervention could not be instantiated as planned. Continue an
+      observational audit if useful, but do not label it a successful balancing
+      experiment."
+    reality: >-
+      This rule was written before any model was trained, on training data only.
+      It is recorded here so that how an intervention-instantiation failure is
+      handled cannot be decided after seeing a test result.
+    change: >-
+      G5 balance thresholds are a scientific instantiation check, not a
+      correctness check. If they fail after the permitted attempts: G5 is
+      recorded as "fail" with the exact failing check; the workflow continues
+      the observational audit; the C1-minus-C0 comparison is reported as an
+      UNDER-BALANCED intervention and never as a successful balancing
+      experiment; and the claim level is capped at "valid_demo" regardless of
+      the other outcomes. Execution-blocking correctness gates are G0-G4 and G6.
+    rationale: >-
+      G0-G4 certify that the pipeline computes what it claims to compute. G5
+      certifies that the intervention achieved its target balance, which is a
+      property of the data as much as of the method. Blocking the whole study
+      on it would discard a valid audit; reporting it as a successful
+      intervention would be a false claim.
+
+
+# ---------------------------------------------------------------------------
+# Task definition
+# ---------------------------------------------------------------------------
+task:
+  rbp: PTBP1
+  cell_type: K562
+  assay: eCLIP
+  encode_experiment: ENCSR981WKN
+  assembly: GRCh38
+  unit: "contiguous genomic window"
+  window_length: 201
+  anchor: "retained reproducible peak midpoint"
+  orientation: >-
+    Windows on the negative genomic strand are reverse-complemented before the
+    single T-to-U conversion. RNA binding is directional, so no reverse-
+    complement augmentation is applied.
+  label: "1 = observed reproducible PTBP1 peak, 0 = sampled eligible background"
+  background_semantics: >-
+    Not detected by this assay under these rules. Not proven unbound RNA.
+
+# ---------------------------------------------------------------------------
+# Sources (validated by G1). Checksums recomputed at acquisition.
+# ---------------------------------------------------------------------------
+sources:
+  peaks:
+    id: ENCFF907HNN
+    url: "https://www.encodeproject.org/files/ENCFF907HNN/@@download/ENCFF907HNN.bed.gz"
+    description: >-
+      PTBP1 K562 eCLIP GRCh38 IDR reproducible peaks
+      (368.01v02.IDR.out.0102merged.bed.blacklist_removed.bed.narrowPeak.encode.bed)
+    format: bed
+    assembly: GRCh38
+    biological_replicates: [1, 2]
+    expected_md5: 394fb86eadb72485ce6939e0185363a8
+    status: released
+    source_url: "https://www.encodeproject.org/experiments/ENCSR981WKN/"
+    notes: "Blacklist regions already removed by the ENCODE pipeline."
+
+  peaks_replicate_1:
+    id: ENCFF594PWG
+    url: "https://www.encodeproject.org/files/ENCFF594PWG/@@download/ENCFF594PWG.bed.gz"
+    description: "PTBP1 K562 eCLIP GRCh38 replicate 1 narrowPeak calls"
+    format: bed
+    assembly: GRCh38
+    biological_replicates: [1]
+    expected_md5: null
+    status: released
+    source_url: "https://www.encodeproject.org/experiments/ENCSR981WKN/"
+    purpose: >-
+      Replicate-level peaks are used only to widen the background exclusion
+      buffer (plan section 4.3). Labels come exclusively from the IDR
+      reproducible file.
+
+  peaks_replicate_2:
+    id: ENCFF894KLP
+    url: "https://www.encodeproject.org/files/ENCFF894KLP/@@download/ENCFF894KLP.bed.gz"
+    description: "PTBP1 K562 eCLIP GRCh38 replicate 2 narrowPeak calls"
+    format: bed
+    assembly: GRCh38
+    biological_replicates: [2]
+    expected_md5: null
+    status: released
+    source_url: "https://www.encodeproject.org/experiments/ENCSR981WKN/"
+    purpose: "Replicate-level peaks, background exclusion buffer only."
+
+  genome:
+    id: hg38.fa.gz
+    url: "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz"
+    description: "UCSC hg38 reference genome FASTA"
+    format: fasta
+    assembly: GRCh38
+    expected_md5: null
+    status: released
+    source_url: "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/"
+
+  annotation:
+    id: gencode.v49.annotation.gtf.gz
+    url: "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.annotation.gtf.gz"
+    description: "GENCODE v49 comprehensive annotation (GRCh38.primary_assembly)"
+    format: gtf
+    assembly: GRCh38
+    expected_md5: null
+    status: released
+    source_url: "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/"
+
+  expression:
+    id: ENCFF255BPX
+    url: "https://www.encodeproject.org/files/ENCFF255BPX/@@download/ENCFF255BPX.tsv"
+    description: "ENCODE K562 RSEM transcript quantification (gene TPM available)"
+    format: tsv
+    assembly: GRCh38
+    expected_md5: null
+    status: released
+    source_url: "https://www.encodeproject.org/experiments/ENCSR361BVV/"
+
+  motif_primary:
+    id: M00249_2.00
+    url: "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M00249_2.00.txt"
+    description: "CisBP-RNA PTBP1 position weight matrix, RNAcompete assay"
+    format: pwm
+    rbp: PTBP1
+    cisbp_tf_id: T080371_2.00
+    study: "Ray et al. (2013)"
+    study_id: RNCMPT00268
+    assay_type: RNAcompete
+    motif_class: Direct   # experimentally measured, not inferred
+    database_build: "2.00"
+    expected_md5: null
+    status: released
+    source_url: "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00"
+
+  motif_secondary:
+    id: M00250_2.00
+    url: "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M00250_2.00.txt"
+    description: "CisBP-RNA PTBP1 second RNAcompete PWM (replicate experiment)"
+    format: pwm
+    rbp: PTBP1
+    cisbp_tf_id: T080371_2.00
+    study: "Ray et al. (2013)"
+    study_id: RNCMPT00269
+    assay_type: RNAcompete
+    motif_class: Direct
+    database_build: "2.00"
+    expected_md5: null
+    status: released
+    source_url: "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00"
+
+  motif_inferred_sensitivity:
+    id: M12970_2.00
+    url: "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M12970_2.00.txt"
+    description: "CisBP-RNA PTBP1 JPL E-value reconstructed PWM — INFERRED, sensitivity only"
+    format: pwm
+    rbp: PTBP1
+    cisbp_tf_id: T080371_2.00
+    study: "Sasse et al. (2025)"
+    study_id: RM_Hom.sap_ENSG00000011304
+    assay_type: JPL-E
+    motif_class: Inferred
+    database_build: "2.00"
+    expected_md5: null
+    status: released
+    source_url: "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00"
+
+# ---------------------------------------------------------------------------
+# Candidate universe and eligibility
+# ---------------------------------------------------------------------------
+candidates:
+  max_positives: 10000            # amended by A1; realized count is min(10000, n_peaks)
+  background_ratio: 4             # 1:4 positive/background, plan section 4.3
+  background_exclusion_buffer: 100 # nt each side of ANY replicate-level peak, plan 4.3
+  expression_min_tpm: 1.0
+  annotation_version: "GENCODE v49"
+  context_categories: [intronic, exonic]
+  collapse_overlapping_positives: true   # one deterministic representative per locus
+  required_bases: ACGT            # N and other IUPAC codes are rejected, not padded
+  reject_out_of_bounds: true
+
+# ---------------------------------------------------------------------------
+# Leakage control and splitting
+# ---------------------------------------------------------------------------
+splits:
+  fractions: {train: 0.70, validation: 0.15, test: 0.15}
+  hash_seed: 20260929
+  join_rules: [shared_gene, overlapping_locus, identical_sequence, near_duplicate]
+  near_duplicate:
+    min_identity: 0.90
+    min_coverage_of_shorter: 0.80
+    count_reverse_complement: true   # for leakage detection only
+    implementation: motifcheck.splits.kmer_jaccard
+  giant_component_max_fraction: 0.05
+  giant_component_max_loss_fraction: 0.20
+  min_train_positives: 2000
+  min_train_components: 200
+  min_eval_positives: 500
+  min_eval_components: 100
+
+# ---------------------------------------------------------------------------
+# Models
+# ---------------------------------------------------------------------------
+models:
+  B0: {kind: constant_prevalence}
+  B1: {kind: logistic, features: mono_dinucleotide, expected_params: 21}
+  B2: {kind: logistic, features: mono_dinucleotide_context, expected_params: "<50",
+       note: "input-coverage feature removed by amendment A2"}
+  B3: {kind: logistic, features: kmer_3_4_5_normalized, expected_params: 1345}
+  B4: {kind: logistic, features: motif_max_score_and_hits, expected_params: 2}
+  C0: {kind: tinycnn, training: standard}
+  C1: {kind: tinycnn, training: nuisance_balanced}
+
+tinycnn:
+  in_channels: 4
+  channels: 32
+  conv_stack:
+    - {kernel: 11, dilation: 1, padding: 5}
+    - {kernel: 5, dilation: 2, padding: 4}
+    - {kernel: 5, dilation: 4, padding: 8}
+  activation: GELU
+  pooling: [mean, max]        # concatenated -> 64 features
+  hidden: 32
+  dropout: 0.1
+  expected_params: 13857
+  receptive_field: 35
+  normalization_layers: none
+  sigmoid_before_loss: false
+
+transformer:
+  enabled: false               # H3; only after the core report
+  d_model: 64
+  n_layers: 2
+  n_heads: 4
+  d_ff: 128
+  param_cap: 300000
+
+optimization:
+  optimizer: AdamW
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 128
+  epochs: 30
+  grad_clip_norm: 1.0
+  loss: BCEWithLogitsLoss
+  checkpoint_selection: best_validation_ap   # tie-break: lower val log loss, then earlier epoch
+  seeds: [17, 29, 43, 71, 101]
+  paired_conditions: [C0, C1]
+  fallback_lr: 0.0003          # at most one prespecified fallback, same for both arms
+  fallback_lr_used: false
+  precision: float32
+
+baselines_regularization_grid: [0.01, 0.1, 1.0, 10.0, 100.0]
+baselines_selected_by: validation_ap
+
+# ---------------------------------------------------------------------------
+# The single intervention: training loss weighting
+# ---------------------------------------------------------------------------
+intervention:
+  strata: [context, gc_quintile, expression_tertile]
+  gc_quintile_source: training_only
+  expression_tertile_source: training_only
+  min_positives_per_stratum: 10
+  min_background_per_stratum: 10
+  w0: "N / (2 * n_y)"
+  w1: "n_s / (2 * n_ys)"
+  normalize_to_mean_one: true
+  clip_ceiling: 5.0
+  clip_before_renormalize: true
+  loss_reduction: weighted_mean_global_normalization
+  max_revise_attempts: 2
+  qc:
+    min_effective_sample_size_fraction: 0.50
+    max_abs_smd_gc: 0.10
+    max_abs_smd_log1p_tpm: 0.10
+    max_abs_context_proportion_diff: 0.05
+  diagnostic_only: [mono_counts, dinucleotide_counts, gene_length]
+
+# ---------------------------------------------------------------------------
+# Evaluation
+# ---------------------------------------------------------------------------
+evaluation:
+  panels:
+    P1: {name: "fixed sampled assay panel", role: primary_predictive}
+    P2: {name: "matched diagnostic panel", role: secondary_predictive, ratio: 1.0}
+  P2_matching: [context, gc, expression]
+  P2_matching_source: training_derived_bins
+  metrics: [average_precision, auroc, log_loss, brier]
+  primary_metric: average_precision
+  report_benchmark_prevalence_on_every_pr_curve: true
+
+motif_audit:
+  motif_id: M00249_2.00          # frozen before scoring
+  pwm_pseudocount: 0.25
+  background_frequencies: {A: 0.25, C: 0.25, G: 0.25, U: 0.25}
+  threshold_source: training_null_sequences
+  target_fpr_in_training_null: 0.01
+  max_windows: 500
+  min_components: 100
+  max_controls_per_instance: 20
+  control_type: mononucleotide_count_and_length_preserving_local_shuffle
+  min_controls_per_instance: 5
+  tie_tolerance_logit: 1.0e-6
+  selection_basis: [label, annotation, motif_score, fixed_hash]
+  forbidden_selection_basis: [model_confidence]
+  specificity_guard: true
+  min_components_for_specificity: 100
+  exploratory_if_below: {components: 100, valid_windows: 200}
+
+attribution:
+  method: ISM                 # exact in silico mutagenesis is the reference
+  substitutions_per_sequence: 603   # 201 positions x 3 alternatives
+  panel_size: 64
+  panel_strata: "16 per positive/background x motif-present/absent"
+  tism:
+    enabled: true
+    check_split: validation
+    min_median_spearman: 0.80
+    min_sign_agreement_top10pct: 0.80
+    on_failure: retain_exact_ism
+
+statistics:
+  unit_of_resampling: leakage_component
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20260929
+  confidence_level: 0.95
+  interval_type: percentile
+  paired: true
+
+primary_comparison:
+  contrast: C1_minus_C0
+  requirement_1_predictive_non_inferiority:
+    metric: average_precision
+    panel: P1
+    rule: lower_95ci_delta > -0.02
+  requirement_2_improved_motif_preference:
+    metric: MPA
+    min_point_estimate: 0.10
+    rule: lower_95ci_delta > 0
+    min_seeds_agreeing: 4
+  specificity_guard:
+    metric: S
+    definition: "MPA_target - MPA_outside"
+    rule: lower_95ci_delta_of_S > 0
+  joint_rule: all_required_conditions_must_pass
+
+claim_levels:
+  - {level: valid_demo, wording: "A reproducible audit of a small PTBP1 peak predictor"}
+  - {level: intervention_supported, wording: "Balancing improved motif-order evidence while preserving performance in this benchmark"}
+  - {level: generalization_supported, wording: "The finding replicated in the tested additional setting"}
+  - {level: mechanism_established, wording: null, note: "Not available from this computational demo alone"}
+
+# ---------------------------------------------------------------------------
+# Budget
+# ---------------------------------------------------------------------------
+budget:
+  total_gpu_hours_cap: 24
+  source_download_cap_gb: 20
+  optional_transformer_after_core_report: true

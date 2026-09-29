@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "data/processed/train_bins.json": "d4eee198c7516f81616a7ccbe14bab94a5b4e23c7256fc0e6f7aaf030109d8a9",
+    "reports/intervention_qc.json": "cab19374d49fda0ac43959f8c4cf18ef144e3be29ca95cce427547f366d810b4",
+    "reports/split_audit.json": "f83754d213e981031b050b18c130be754f1b74d4bbff102228d02f4bcfafeac1",
+    "results/audit/audit_validation.json": "7b57484ea17cfff10ba7ac5c5516e4c154b754ab08f9548d4529d81ad8a28a06",
+    "results/baselines/baselines.json": "4acde3fd68c0945afec8f06d098eef3a460b1c2a16ff48c2e8c7cca4405d5bbc",
+    "results/motif_threshold.json": "2b1ce3e982859e22a0339b25440a844795ec3ce1cb284d4a742d295dd72edb01"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260929,
+    "unit": "leakage_component"
+  },
+  "checkpoints": {
+    "results/training/C0_seed101.pt": "042fe90278d4597e6c4d5503df53563e3bd20e413f698050534bdcac3a39ef1e",
+    "results/training/C0_seed17.pt": "2cdbd5a9256a2b314ffcb82b6de5d2929791346aeab42281005d875ad003c027",
+    "results/training/C0_seed29.pt": "299f272f1b404167df6910abc6bd24c136b25867832a448564ebabdfef534005",
+    "results/training/C0_seed43.pt": "f3631648e0817deb90681e35984fdca602adb49adb5bd4f3071fac0c3655ad8d",
+    "results/training/C0_seed71.pt": "7abfb2d9272b841aa8dee6e11f2d9db564e69db130c7fd88fc3344461ee3d241",
+    "results/training/C1_seed101.pt": "1be14d6c0ed661a34c18100b2c3dfd6c74b52f170c31f1105fe066f51fe962b0",
+    "results/training/C1_seed17.pt": "a22e3712b05048a1107dea37a07f1fdf26d1e26a5d745dfe761b6f0d3d3fdd1e",
+    "results/training/C1_seed29.pt": "196ca804b0e9866c15d62cd70aa6bd03be5e74dde70af0704042dad61865d0c2",
+    "results/training/C1_seed43.pt": "ef6d9ffc2e801a10eb8726f4ae480b671d19a84649cd8478cc89194d48100285",
+    "results/training/C1_seed71.pt": "b4cd51ad21abbffe38dcf5ef695eee1588d00623f808d516d959b843623c325b"
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "data_hash": "8113141375f37956c5ed3192ffc8952ac24826412085e59926d285a88a203af9",
+  "dataset_version": "motifcheck-ptbp1-k562-grch38-v1",
+  "endpoints": [
+    "P1 average precision, C1 minus C0, lower 95% CI > -0.02",
+    "MPA, C1 minus C0, point >= +0.10, lower 95% CI > 0, >= 4/5 seeds agree",
+    "specificity guard S = MPA_target - MPA_outside, lower 95% CI of delta S > 0"
+  ],
+  "lock_hash": "422c58b5e38821fc54855a2ca0aaa63860b5ec2d2eea36f62bb47e231d66f91f",
+  "locked_at_utc": "2026-09-29T17:47:41+00:00",
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c"
+}

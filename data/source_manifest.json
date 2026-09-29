@@ -1,0 +1,311 @@
+{
+  "assemblies": [
+    "GRCh38"
+  ],
+  "complete": true,
+  "failures": [],
+  "generated_at_utc": "2026-09-29T18:44:27+00:00",
+  "manifest_version": 1,
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "sources": {
+    "annotation": {
+      "assembly": "GRCh38",
+      "decompressed_path": "data/external/annotation__gencode.v49.annotation.gtf",
+      "decompressed_sha256": "ff32fd55c6799b3b94fe10aa17b2b5d4da952fa1de12fe44afadf32e949ec914",
+      "description": "GENCODE v49 comprehensive annotation (GRCh38.primary_assembly)",
+      "format": "gtf",
+      "id": "gencode.v49.annotation.gtf.gz",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:18+00:00",
+      "role": "annotation",
+      "sha256": "d6e6fe0515c95b2a8cd36a853c1989cee9115c736c60237c56ae92b9daaaf7c4",
+      "size_bytes": 93374019,
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/",
+      "status": "released",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.annotation.gtf.gz",
+      "validated": {
+        "n_contigs": 25,
+        "n_features": 7750154,
+        "n_genes": 78691,
+        "seqnames_match_peaks": true
+      },
+      "validation_status": "ok"
+    },
+    "expression": {
+      "assembly": "GRCh38",
+      "description": "ENCODE K562 RSEM transcript quantification (gene TPM available)",
+      "format": "tsv",
+      "id": "ENCFF255BPX",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:27+00:00",
+      "role": "expression",
+      "sha256": "27d33c96623e1c843b4b71c0a907033d76462f78af457f0896f7d8fbe149584c",
+      "size_bytes": 31297301,
+      "source_url": "https://www.encodeproject.org/experiments/ENCSR361BVV/",
+      "status": "released",
+      "url": "https://www.encodeproject.org/files/ENCFF255BPX/@@download/ENCFF255BPX.tsv",
+      "validated": {
+        "columns": [
+          "transcript_id",
+          "gene_id",
+          "length",
+          "effective_length",
+          "expected_count",
+          "TPM",
+          "FPKM",
+          "IsoPct",
+          "posterior_mean_count",
+          "posterior_standard_deviation_of_count",
+          "pme_TPM",
+          "pme_FPKM",
+          "IsoPct_from_pme_TPM",
+          "TPM_ci_lower_bound",
+          "TPM_ci_upper_bound",
+          "TPM_coefficient_of_quartile_variation",
+          "FPKM_ci_lower_bound",
+          "FPKM_ci_upper_bound",
+          "FPKM_coefficient_of_quartile_variation"
+        ],
+        "gene_level_aggregation_required": true,
+        "tool": "RSEM (ENCODE)",
+        "tpm_column": "TPM"
+      },
+      "validation_status": "ok"
+    },
+    "genome": {
+      "assembly": "GRCh38",
+      "decompressed_path": "data/external/genome__hg38.fa",
+      "decompressed_sha256": "5be01555d98347fdb3714dc84c6f77c9d8bc774adcf32c6f7a8fa06f5baf5e51",
+      "description": "UCSC hg38 reference genome FASTA",
+      "format": "fasta",
+      "id": "hg38.fa.gz",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:15+00:00",
+      "role": "genome",
+      "sha256": "c1dd87068c254eb53d944f71e51d1311964fce8de24d6fc0effc9c61c01527d4",
+      "size_bytes": 983659424,
+      "source_url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/",
+      "status": "released",
+      "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz",
+      "validated": {
+        "index": "genome__hg38.fa.fai",
+        "n_contigs": 455
+      },
+      "validation_status": "ok"
+    },
+    "motif_inferred_sensitivity": {
+      "assembly": null,
+      "description": "CisBP-RNA PTBP1 JPL E-value reconstructed PWM \u2014 INFERRED, sensitivity only",
+      "format": "pwm",
+      "id": "M12970_2.00",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:27+00:00",
+      "role": "motif_inferred_sensitivity",
+      "sha256": "7a062a0acac3b7afecb6cad5e94e10cdafac811d9b940035b00e9ae367a029a8",
+      "size_bytes": 312,
+      "source_url": "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00",
+      "status": "released",
+      "url": "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M12970_2.00.txt",
+      "validated": {
+        "assay_type": "JPL-E",
+        "bases": [
+          "A",
+          "C",
+          "G",
+          "U"
+        ],
+        "cisbp_tf_id": "T080371_2.00",
+        "column_sums_are_not_normalised": [
+          0.461691,
+          1.842116,
+          0.367193,
+          5.329005
+        ],
+        "content": "position-major frequencies; each row sums to 1",
+        "database_build": "2.00",
+        "max_abs_deviation_of_row_from_one": 9.999999999177334e-07,
+        "motif_class": "Inferred",
+        "n_positions": 8,
+        "row_sums": [
+          1.0,
+          1.0,
+          1.000001,
+          1.000001,
+          1.000001,
+          1.0,
+          1.000001,
+          1.000001
+        ],
+        "study": "Sasse et al. (2025)",
+        "study_id": "RM_Hom.sap_ENSG00000011304"
+      },
+      "validation_status": "ok"
+    },
+    "motif_primary": {
+      "assembly": null,
+      "description": "CisBP-RNA PTBP1 position weight matrix, RNAcompete assay",
+      "format": "pwm",
+      "id": "M00249_2.00",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:27+00:00",
+      "role": "motif_primary",
+      "sha256": "a94af776c2ed414fa95e16d21292e6db2f9b0b72e0fd227a56c29fa49d880783",
+      "size_bytes": 545,
+      "source_url": "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00",
+      "status": "released",
+      "url": "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M00249_2.00.txt",
+      "validated": {
+        "assay_type": "RNAcompete",
+        "bases": [
+          "A",
+          "C",
+          "G",
+          "U"
+        ],
+        "cisbp_tf_id": "T080371_2.00",
+        "column_sums_are_not_normalised": [
+          0.404091,
+          1.731137,
+          0.223928,
+          4.640844
+        ],
+        "content": "position-major frequencies; each row sums to 1",
+        "database_build": "2.00",
+        "max_abs_deviation_of_row_from_one": 0.0,
+        "motif_class": "Direct",
+        "n_positions": 7,
+        "row_sums": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "study": "Ray et al. (2013)",
+        "study_id": "RNCMPT00268"
+      },
+      "validation_status": "ok"
+    },
+    "motif_secondary": {
+      "assembly": null,
+      "description": "CisBP-RNA PTBP1 second RNAcompete PWM (replicate experiment)",
+      "format": "pwm",
+      "id": "M00250_2.00",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:27+00:00",
+      "role": "motif_secondary",
+      "sha256": "4f3985620487e8c4ae1b4b83e2896ebf320c48dfe1479fc99fcdb78c33392d8b",
+      "size_bytes": 543,
+      "source_url": "https://cisbp-rna.ccbr.utoronto.ca/TFreport.php?searchTF=T080371_2.00",
+      "status": "released",
+      "url": "https://cisbp-rna.ccbr.utoronto.ca/data/2_00/DataFiles/PWMs/Files/M00250_2.00.txt",
+      "validated": {
+        "assay_type": "RNAcompete",
+        "bases": [
+          "A",
+          "C",
+          "G",
+          "U"
+        ],
+        "cisbp_tf_id": "T080371_2.00",
+        "column_sums_are_not_normalised": [
+          0.827951,
+          1.782237,
+          0.271826,
+          4.117986
+        ],
+        "content": "position-major frequencies; each row sums to 1",
+        "database_build": "2.00",
+        "max_abs_deviation_of_row_from_one": 0.0,
+        "motif_class": "Direct",
+        "n_positions": 7,
+        "row_sums": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "study": "Ray et al. (2013)",
+        "study_id": "RNCMPT00269"
+      },
+      "validation_status": "ok"
+    },
+    "peaks": {
+      "assembly": "GRCh38",
+      "description": "PTBP1 K562 eCLIP GRCh38 IDR reproducible peaks (368.01v02.IDR.out.0102merged.bed.blacklist_removed.bed.narrowPeak.encode.bed)",
+      "expected_md5": "394fb86eadb72485ce6939e0185363a8",
+      "format": "bed",
+      "id": "ENCFF907HNN",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "md5": "394fb86eadb72485ce6939e0185363a8",
+      "md5_matches_portal": true,
+      "retrieved_at_utc": "2026-09-29T18:44:15+00:00",
+      "role": "peaks",
+      "sha256": "6b4438f26ddbf86816a9aa58f34d117e78f21cb77cbb303e8f49407754ccb697",
+      "size_bytes": 162406,
+      "source_url": "https://www.encodeproject.org/experiments/ENCSR981WKN/",
+      "status": "released",
+      "url": "https://www.encodeproject.org/files/ENCFF907HNN/@@download/ENCFF907HNN.bed.gz",
+      "validated": {
+        "n_columns": 10,
+        "n_peaks": 7797,
+        "name_field": "PTBP1_K562_IDR",
+        "schema": "narrowPeak (BED6+3); column 5 is the ENCODE constant 1000 and is NOT a calibrated statistic; columns 7-8 are -1 in this release and are not used",
+        "score_field": "1000"
+      },
+      "validation_status": "ok"
+    },
+    "peaks_replicate_1": {
+      "assembly": "GRCh38",
+      "description": "PTBP1 K562 eCLIP GRCh38 replicate 1 narrowPeak calls",
+      "format": "bed",
+      "id": "ENCFF594PWG",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:15+00:00",
+      "role": "peaks_replicate_1",
+      "sha256": "885780ea183b1acc6128c2f095c9e2196bd01aabed3cf881414baef691a6d1de",
+      "size_bytes": 1004814,
+      "source_url": "https://www.encodeproject.org/experiments/ENCSR981WKN/",
+      "status": "released",
+      "url": "https://www.encodeproject.org/files/ENCFF594PWG/@@download/ENCFF594PWG.bed.gz",
+      "validated": {
+        "n_columns": 10,
+        "n_peaks": 76494,
+        "name_field": "PTBP1_K562_rep01",
+        "schema": "narrowPeak (BED6+3); column 5 is the ENCODE constant 1000 and is NOT a calibrated statistic; columns 7-8 are -1 in this release and are not used",
+        "score_field": "200"
+      },
+      "validation_status": "ok"
+    },
+    "peaks_replicate_2": {
+      "assembly": "GRCh38",
+      "description": "PTBP1 K562 eCLIP GRCh38 replicate 2 narrowPeak calls",
+      "format": "bed",
+      "id": "ENCFF894KLP",
+      "license_note": "ENCODE data are released under the ENCODE data use policy; UCSC and GENCODE are freely redistributable; CisBP-RNA motifs are used for academic research with citation.",
+      "retrieved_at_utc": "2026-09-29T18:44:15+00:00",
+      "role": "peaks_replicate_2",
+      "sha256": "0a934d420e58e8a132700e08854406e9dd9be6314764904fcb9d36f69abc872a",
+      "size_bytes": 1476599,
+      "source_url": "https://www.encodeproject.org/experiments/ENCSR981WKN/",
+      "status": "released",
+      "url": "https://www.encodeproject.org/files/ENCFF894KLP/@@download/ENCFF894KLP.bed.gz",
+      "validated": {
+        "n_columns": 10,
+        "n_peaks": 116987,
+        "name_field": "PTBP1_K562_rep02",
+        "schema": "narrowPeak (BED6+3); column 5 is the ENCODE constant 1000 and is NOT a calibrated statistic; columns 7-8 are -1 in this release and are not used",
+        "score_field": "1000"
+      },
+      "validation_status": "ok"
+    }
+  },
+  "unavailable_by_design": {
+    "processed_size_matched_input_signal": "Not released for ENCSR981WKN. Amendment A2 removes the input-coverage feature from B2 and disables the input-coverage observability filter."
+  }
+}

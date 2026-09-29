@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "all_best_epochs_present": true,
+    "all_losses_finite": true,
+    "all_pairs_matched": true,
+    "checkpoint_reload_max_abs_logit_diff": 0.0,
+    "checkpoint_reload_ok": true,
+    "checkpoint_reload_tolerance": 1e-06,
+    "distinct_parameter_counts": [
+      13857
+    ],
+    "n_seed_pairs": 5
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": null,
+  "data_hash": null,
+  "detail": {
+    "per_seed_best_val_ap": {
+      "seed101": {
+        "C0": 0.956556224204165,
+        "C1": 0.9569635019598699
+      },
+      "seed17": {
+        "C0": 0.951162500208739,
+        "C1": 0.9503833910928456
+      },
+      "seed29": {
+        "C0": 0.9519483761557772,
+        "C1": 0.9556466870888591
+      },
+      "seed43": {
+        "C0": 0.9520284871733794,
+        "C1": 0.9551572667561644
+      },
+      "seed71": {
+        "C0": 0.9521174152841989,
+        "C1": 0.9549790053567662
+      }
+    }
+  },
+  "evidence_paths": [
+    "results/training/pairs.jsonl"
+  ],
+  "gate": "G4",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T18:41:04+00:00",
+  "warnings": []
+}

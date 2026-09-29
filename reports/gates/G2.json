@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "all_minimum_support_ok": true,
+    "cross_split_component_overlap__train__test": 0,
+    "cross_split_component_overlap__train__validation": 0,
+    "cross_split_component_overlap__validation__test": 0,
+    "cross_split_exact_duplicate_overlap__train__test": 0,
+    "cross_split_exact_duplicate_overlap__train__validation": 0,
+    "cross_split_exact_duplicate_overlap__validation__test": 0,
+    "cross_split_gene_overlap__train__test": 0,
+    "cross_split_gene_overlap__train__validation": 0,
+    "cross_split_gene_overlap__validation__test": 0,
+    "cross_split_locus_overlap__train__test": 0,
+    "cross_split_locus_overlap__train__validation": 0,
+    "cross_split_locus_overlap__validation__test": 0,
+    "giant_component_removed": false,
+    "near_duplicate_pairs_merged": 128,
+    "test_components": 1011,
+    "test_positives": 754,
+    "train_components": 4822,
+    "train_positives": 3786,
+    "validation_components": 1015,
+    "validation_positives": 812,
+    "zero_forbidden_overlap": true
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "data_hash": "8113141375f37956c5ed3192ffc8952ac24826412085e59926d285a88a203af9",
+  "detail": {
+    "join_statistics": {
+      "gene_joins": 20349,
+      "identical_sequence_groups": 0,
+      "identical_sequence_joins": 0,
+      "largest_component_size": 130,
+      "locus_joins": 141,
+      "n_components": 6848,
+      "n_gene_groups": 6939,
+      "near_duplicate_impl": "motifcheck.splits.kmer_jaccard",
+      "near_duplicate_pairs": 128,
+      "near_duplicate_settings": {
+        "count_reverse_complement": true,
+        "implementation": "motifcheck.splits.kmer_jaccard",
+        "min_coverage_of_shorter": 0.8,
+        "min_identity": 0.9
+      }
+    },
+    "split_counts": {
+      "test": {
+        "background": 3124,
+        "components": 1011,
+        "genes": 1020,
+        "positives": 754,
+        "positives_in_unique_components": 360,
+        "rows": 3878
+      },
+      "train": {
+        "background": 15446,
+        "components": 4822,
+        "genes": 4893,
+        "positives": 3786,
+        "positives_in_unique_components": 1710,
+        "rows": 19232
+      },
+      "validation": {
+        "background": 3366,
+        "components": 1015,
+        "genes": 1026,
+        "positives": 812,
+        "positives_in_unique_components": 377,
+        "rows": 4178
+      }
+    }
+  },
+  "evidence_paths": [
+    "reports/split_audit.json"
+  ],
+  "gate": "G2",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T18:45:47+00:00",
+  "warnings": []
+}

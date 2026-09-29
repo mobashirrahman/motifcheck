@@ -1,0 +1,4 @@
+endpoint,contrast,estimate,ci_low,ci_high,threshold,passes
+AP on P1 (predictive non-inferiority),C1 - C0,-0.000261,-0.006199,0.005813,lower 95% CI > -0.02,True
+MPA (motif preference),C1 - C0,0.014155,-0.008601379504504448,0.035487978603603615,>= 0.1 and lower CI > 0 and >= 4/5 seeds agree,False
+S = MPA_target - MPA_outside (specificity guard),C1 - C0,0.021021,-0.002105,0.044375,lower 95% CI > 0,False

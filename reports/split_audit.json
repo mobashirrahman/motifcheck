@@ -1,0 +1,199 @@
+{
+  "all_support_ok": true,
+  "candidate_loss_fraction_from_giant_removal": 0.0,
+  "exploratory": false,
+  "forbidden_overlap_checks": {
+    "cross_split_component_overlap__train__test": 0,
+    "cross_split_component_overlap__train__validation": 0,
+    "cross_split_component_overlap__validation__test": 0,
+    "cross_split_exact_duplicate_overlap__train__test": 0,
+    "cross_split_exact_duplicate_overlap__train__validation": 0,
+    "cross_split_exact_duplicate_overlap__validation__test": 0,
+    "cross_split_gene_overlap__train__test": 0,
+    "cross_split_gene_overlap__train__validation": 0,
+    "cross_split_gene_overlap__validation__test": 0,
+    "cross_split_locus_overlap__train__test": 0,
+    "cross_split_locus_overlap__train__validation": 0,
+    "cross_split_locus_overlap__validation__test": 0
+  },
+  "generated_at_utc": "2026-09-29T18:45:47+00:00",
+  "giant_component_fraction": 0.00476,
+  "giant_component_max_allowed": 0.05,
+  "giant_component_removed": false,
+  "join_statistics": {
+    "gene_joins": 20349,
+    "identical_sequence_groups": 0,
+    "identical_sequence_joins": 0,
+    "largest_component_size": 130,
+    "locus_joins": 141,
+    "n_components": 6848,
+    "n_gene_groups": 6939,
+    "near_duplicate_impl": "motifcheck.splits.kmer_jaccard",
+    "near_duplicate_pairs": 128,
+    "near_duplicate_settings": {
+      "count_reverse_complement": true,
+      "implementation": "motifcheck.splits.kmer_jaccard",
+      "min_coverage_of_shorter": 0.8,
+      "min_identity": 0.9
+    }
+  },
+  "minimum_support_checks": {
+    "test_components_ok": true,
+    "test_positives_ok": true,
+    "train_components_ok": true,
+    "train_positives_ok": true,
+    "validation_components_ok": true,
+    "validation_positives_ok": true
+  },
+  "near_duplicate_examples": [
+    {
+      "coverage": 0.9005,
+      "i": 5513,
+      "identity": 0.9005,
+      "j": 26827
+    },
+    {
+      "coverage": 0.9303,
+      "i": 5552,
+      "identity": 0.9303,
+      "j": 15355
+    },
+    {
+      "coverage": 0.9154,
+      "i": 5579,
+      "identity": 0.9154,
+      "j": 9721
+    },
+    {
+      "coverage": 0.9652,
+      "i": 5579,
+      "identity": 0.9652,
+      "j": 23980
+    },
+    {
+      "coverage": 0.9502,
+      "i": 5682,
+      "identity": 0.9502,
+      "j": 12866
+    },
+    {
+      "coverage": 0.9005,
+      "i": 6020,
+      "identity": 0.9005,
+      "j": 19619
+    },
+    {
+      "coverage": 0.9055,
+      "i": 6020,
+      "identity": 0.9055,
+      "j": 24105
+    },
+    {
+      "coverage": 0.9502,
+      "i": 6059,
+      "identity": 0.9502,
+      "j": 24410
+    },
+    {
+      "coverage": 0.9552,
+      "i": 6092,
+      "identity": 0.9552,
+      "j": 13074
+    },
+    {
+      "coverage": 0.9652,
+      "i": 6092,
+      "identity": 0.9652,
+      "j": 16205
+    },
+    {
+      "coverage": 0.9055,
+      "i": 6092,
+      "identity": 0.9055,
+      "j": 25433
+    },
+    {
+      "coverage": 0.9055,
+      "i": 6099,
+      "identity": 0.9055,
+      "j": 18359
+    },
+    {
+      "coverage": 0.9055,
+      "i": 6307,
+      "identity": 0.9055,
+      "j": 10782
+    },
+    {
+      "coverage": 0.9005,
+      "i": 6307,
+      "identity": 0.9005,
+      "j": 13170
+    },
+    {
+      "coverage": 0.9005,
+      "i": 6307,
+      "identity": 0.9005,
+      "j": 17566
+    },
+    {
+      "coverage": 0.9403,
+      "i": 6348,
+      "identity": 0.9403,
+      "j": 24097
+    },
+    {
+      "coverage": 0.9104,
+      "i": 6436,
+      "identity": 0.9104,
+      "j": 25847
+    },
+    {
+      "coverage": 0.9204,
+      "i": 6499,
+      "identity": 0.9204,
+      "j": 14110
+    },
+    {
+      "coverage": 0.9851,
+      "i": 6532,
+      "identity": 0.9851,
+      "j": 15954
+    },
+    {
+      "coverage": 0.9104,
+      "i": 6597,
+      "identity": 0.9104,
+      "j": 15450
+    }
+  ],
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "split_counts": {
+    "test": {
+      "background": 3124,
+      "components": 1011,
+      "genes": 1020,
+      "positives": 754,
+      "positives_in_unique_components": 360,
+      "rows": 3878
+    },
+    "train": {
+      "background": 15446,
+      "components": 4822,
+      "genes": 4893,
+      "positives": 3786,
+      "positives_in_unique_components": 1710,
+      "rows": 19232
+    },
+    "validation": {
+      "background": 3366,
+      "components": 1015,
+      "genes": 1026,
+      "positives": 812,
+      "positives_in_unique_components": 377,
+      "rows": 4178
+    }
+  },
+  "status": "pass",
+  "zero_forbidden_overlap": true
+}

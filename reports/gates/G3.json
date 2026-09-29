@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "n_failed": 0,
+    "n_passed": 5,
+    "n_tests": 5,
+    "overfit_fixture_achieved_accuracy": 1.0,
+    "overfit_fixture_target": 0.99,
+    "synthetic_fixtures_passed": true
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": null,
+  "data_hash": null,
+  "detail": {
+    "failures": []
+  },
+  "evidence_paths": [
+    "reports/self_test.json"
+  ],
+  "gate": "G3",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T18:46:13+00:00",
+  "warnings": [
+    "A flaky exact neural metric is not a per-commit gate (protocol section 10.2); tolerances are set on development fixtures"
+  ]
+}

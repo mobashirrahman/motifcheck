@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "bootstrap_replicates_declared": 2000,
+    "n_amendments_recorded": 5,
+    "primary_metric_declared": "average_precision",
+    "protocol_saved": true,
+    "requirement_1_margin_declared": "lower_95ci_delta > -0.02",
+    "requirement_2_margin_declared": 0.1,
+    "seeds_declared": 5,
+    "total_gpu_hour_cap": 24,
+    "window_length_declared": 201
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "data_hash": null,
+  "detail": {
+    "amendments": [
+      {
+        "change": "Positives are capped at min(10000, n_reproducible_peaks). Background is drawn at 4x the realized positive count, preserving the planned 1:4 ratio rather than the planned absolute count.",
+        "id": "A1",
+        "section": "4.3"
+      },
+      {
+        "change": "The input-coverage feature is dropped from baseline B2 and the input-coverage observability filter is disabled. Input signal is recorded as an explicitly unavailable column in the data card. B2 therefore uses context + log1p TPM only, and is relabelled accordingly.",
+        "id": "A2",
+        "section": "4.1 / 6 / 4.3"
+      },
+      {
+        "change": "Motifs are fetched from the CisBP-RNA build 2.00 PWM file directory, with motif id, study, assay type and Direct/Inferred status recorded verbatim in the source manifest. Primary motif is fixed before scoring.",
+        "id": "A3",
+        "section": "4.1 / 8.2"
+      },
+      {
+        "change": "Annotation is GENCODE v49 basic protein-coding on GRCh38. Expression is the pinned ENCODE K562 RSEM quantification listed in the manifest.",
+        "id": "A4",
+        "section": "4.1"
+      },
+      {
+        "change": "G5 balance thresholds are a scientific instantiation check, not a correctness check. If they fail after the permitted attempts: G5 is recorded as \"fail\" with the exact failing check; the workflow continues the observational audit; the C1-minus-C0 comparison is reported as an UNDER-BALANCED intervention and never as a successful balancing experiment; and the claim level is capped at \"valid_demo\" regardless of the other outcomes. Execution-blocking correctness gates are G0-G4 and G6.",
+        "id": "A5",
+        "section": "7 / 10 / 13"
+      }
+    ]
+  },
+  "evidence_paths": [
+    "configs/protocol.yaml"
+  ],
+  "gate": "G0",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T18:44:15+00:00",
+  "warnings": []
+}

@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "distinct_assemblies": 1,
+    "downloads_complete": true,
+    "n_failed": 0,
+    "n_sources": 9,
+    "n_validated_ok": 9,
+    "n_with_sha256": 9
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "data_hash": null,
+  "detail": {
+    "sources": {
+      "annotation": {
+        "id": "gencode.v49.annotation.gtf.gz",
+        "sha256": "d6e6fe0515c95b2a8cd36a853c1989cee9115c736c60237c56ae92b9daaaf7c4",
+        "validation_status": "ok"
+      },
+      "expression": {
+        "id": "ENCFF255BPX",
+        "sha256": "27d33c96623e1c843b4b71c0a907033d76462f78af457f0896f7d8fbe149584c",
+        "validation_status": "ok"
+      },
+      "genome": {
+        "id": "hg38.fa.gz",
+        "sha256": "c1dd87068c254eb53d944f71e51d1311964fce8de24d6fc0effc9c61c01527d4",
+        "validation_status": "ok"
+      },
+      "motif_inferred_sensitivity": {
+        "id": "M12970_2.00",
+        "sha256": "7a062a0acac3b7afecb6cad5e94e10cdafac811d9b940035b00e9ae367a029a8",
+        "validation_status": "ok"
+      },
+      "motif_primary": {
+        "id": "M00249_2.00",
+        "sha256": "a94af776c2ed414fa95e16d21292e6db2f9b0b72e0fd227a56c29fa49d880783",
+        "validation_status": "ok"
+      },
+      "motif_secondary": {
+        "id": "M00250_2.00",
+        "sha256": "4f3985620487e8c4ae1b4b83e2896ebf320c48dfe1479fc99fcdb78c33392d8b",
+        "validation_status": "ok"
+      },
+      "peaks": {
+        "id": "ENCFF907HNN",
+        "sha256": "6b4438f26ddbf86816a9aa58f34d117e78f21cb77cbb303e8f49407754ccb697",
+        "validation_status": "ok"
+      },
+      "peaks_replicate_1": {
+        "id": "ENCFF594PWG",
+        "sha256": "885780ea183b1acc6128c2f095c9e2196bd01aabed3cf881414baef691a6d1de",
+        "validation_status": "ok"
+      },
+      "peaks_replicate_2": {
+        "id": "ENCFF894KLP",
+        "sha256": "0a934d420e58e8a132700e08854406e9dd9be6314764904fcb9d36f69abc872a",
+        "validation_status": "ok"
+      }
+    },
+    "unavailable_by_design": {
+      "processed_size_matched_input_signal": "Not released for ENCSR981WKN. Amendment A2 removes the input-coverage feature from B2 and disables the input-coverage observability filter."
+    }
+  },
+  "evidence_paths": [
+    "data/source_manifest.json"
+  ],
+  "gate": "G1",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T18:44:27+00:00",
+  "warnings": [
+    "peaks_replicate_1: no portal md5 published; sha256 recorded instead",
+    "peaks_replicate_2: no portal md5 published; sha256 recorded instead",
+    "genome: no portal md5 published; sha256 recorded instead",
+    "annotation: no portal md5 published; sha256 recorded instead",
+    "expression: no portal md5 published; sha256 recorded instead",
+    "motif_primary: no portal md5 published; sha256 recorded instead",
+    "motif_secondary: no portal md5 published; sha256 recorded instead",
+    "motif_inferred_sensitivity: no portal md5 published; sha256 recorded instead"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "assembly": "GRCh38",
+  "background_ratio_realized": 4.099,
+  "context_counts": {
+    "exonic": 3307,
+    "intronic": 23981
+  },
+  "dataset_version": "motifcheck-ptbp1-k562-grch38-v1",
+  "exclusion_counts": {
+    "ambiguous_gene_or_context": 3887,
+    "background_non_canonical_bases": 8,
+    "collapsed_into_existing_positive": 1562
+  },
+  "expression_min_tpm": 1.0,
+  "gc_mean_background": 0.41681590225386556,
+  "gc_mean_positive": 0.4275892584908046,
+  "generated_at_utc": "2026-09-29T18:45:26+00:00",
+  "known_amendment_impact": {
+    "A1_positive_cap": 10000,
+    "A1_realized_positives": 5352,
+    "A2_input_signal": "unavailable; column present and NaN, never zero-filled"
+  },
+  "label_context_crosstab": {
+    "exonic": {
+      "0": 2544,
+      "1": 763
+    },
+    "intronic": {
+      "0": 19392,
+      "1": 4589
+    }
+  },
+  "n_background": 21936,
+  "n_expression_unmapped_transcripts": 5632,
+  "n_genes_represented": 6939,
+  "n_idr_reproducible_peaks_input": 7797,
+  "n_positive_after_filters": 5352,
+  "n_rows_total": 27288,
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "usable_expressed_sequence_mb": 709.02,
+  "window_length": 201
+}

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motifcheck"
+version = "1.0.0"
+description = "Small-model study of sequence-composition shortcuts in PTBP1 binding prediction"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+# Pinned to the versions the reported results were produced with.
+# The exact resolved set, including transitive dependencies, is in
+# environment.lock.txt.
+dependencies = [
+    "torch==2.5.1",
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "scipy==1.18.1",
+    "pyarrow==25.0.1",
+    "biopython==1.88",
+    "pysam==0.24.1",
+    "matplotlib==3.11.2",
+    "pyyaml==6.0.3",
+    "requests==2.34.2",
+    "tqdm==4.70.1",
+]
+
+[project.optional-dependencies]
+workflow = ["snakemake==9.27.0"]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+motifcheck = "motifcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

@@ -1,0 +1,338 @@
+{
+  "all_thresholds_met": false,
+  "attempts": [
+    {
+      "attempt": 0,
+      "qc": {
+        "all_passed": false,
+        "checks": {
+          "context_proportions": {
+            "exonic": {
+              "abs_diff": 0.005735152380768702,
+              "background": 0.10291540544846263,
+              "positive": 0.10865055782923133
+            },
+            "intronic": {
+              "abs_diff": 0.0057351523807689375,
+              "background": 0.8970845945515374,
+              "positive": 0.8913494421707685
+            }
+          },
+          "effective_sample_size_fraction": 0.55185,
+          "effective_sample_size_min": 0.5,
+          "max_context_proportion_diff": 0.00574,
+          "max_context_proportion_diff_max": 0.05,
+          "smd_gc": 0.05267,
+          "smd_gc_max_abs": 0.1,
+          "smd_log1p_tpm": 0.13752,
+          "smd_log1p_tpm_max_abs": 0.1
+        },
+        "clip_ceiling": 5.0,
+        "generated_at_utc": "2026-09-29T17:51:05+00:00",
+        "n_weighted_rows": 18831,
+        "note": "balance that remains after clipping is reported, not hidden",
+        "passed": {
+          "context_proportions": true,
+          "effective_sample_size": true,
+          "smd_gc": true,
+          "smd_log1p_tpm": false
+        },
+        "residual_diagnostics": {
+          "n_A": {
+            "smd": -1.86564
+          },
+          "n_C": {
+            "smd": 1.22953
+          },
+          "n_G": {
+            "smd": -1.35896
+          },
+          "n_U": {
+            "smd": 1.6919
+          },
+          "note": "diagnostics only per protocol section 7; they are not additional hidden matching requirements"
+        },
+        "residual_diagnostics_are_not_acceptance_criteria": true,
+        "weight_mean_after_normalisation": 1.0
+      },
+      "strata_merge_report": {
+        "attempt": 0,
+        "dropped_for_no_common_support": [],
+        "dropped_strata": [
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0"
+        ],
+        "merges": [
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q2|t0",
+            "to": "exonic|q1|t0"
+          },
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q0|t1",
+            "to": "exonic|q0|t0"
+          }
+        ],
+        "min_background_per_stratum": 10,
+        "min_positives_per_stratum": 10,
+        "n_strata_dropped_for_no_common_support": 0
+      }
+    },
+    {
+      "attempt": 1,
+      "qc": {
+        "all_passed": false,
+        "checks": {
+          "context_proportions": {
+            "exonic": {
+              "abs_diff": 0.005735152380768702,
+              "background": 0.10291540544846263,
+              "positive": 0.10865055782923133
+            },
+            "intronic": {
+              "abs_diff": 0.0057351523807689375,
+              "background": 0.8970845945515374,
+              "positive": 0.8913494421707685
+            }
+          },
+          "effective_sample_size_fraction": 0.55185,
+          "effective_sample_size_min": 0.5,
+          "max_context_proportion_diff": 0.00574,
+          "max_context_proportion_diff_max": 0.05,
+          "smd_gc": 0.05267,
+          "smd_gc_max_abs": 0.1,
+          "smd_log1p_tpm": 0.13752,
+          "smd_log1p_tpm_max_abs": 0.1
+        },
+        "clip_ceiling": 5.0,
+        "generated_at_utc": "2026-09-29T17:51:05+00:00",
+        "n_weighted_rows": 18831,
+        "note": "balance that remains after clipping is reported, not hidden",
+        "passed": {
+          "context_proportions": true,
+          "effective_sample_size": true,
+          "smd_gc": true,
+          "smd_log1p_tpm": false
+        },
+        "residual_diagnostics": {
+          "n_A": {
+            "smd": -1.86564
+          },
+          "n_C": {
+            "smd": 1.22953
+          },
+          "n_G": {
+            "smd": -1.35896
+          },
+          "n_U": {
+            "smd": 1.6919
+          },
+          "note": "diagnostics only per protocol section 7; they are not additional hidden matching requirements"
+        },
+        "residual_diagnostics_are_not_acceptance_criteria": true,
+        "weight_mean_after_normalisation": 1.0
+      },
+      "strata_merge_report": {
+        "attempt": 1,
+        "dropped_for_no_common_support": [],
+        "dropped_strata": [
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0"
+        ],
+        "merges": [
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q2|t0",
+            "to": "exonic|q1|t0"
+          },
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q0|t1",
+            "to": "exonic|q0|t0"
+          }
+        ],
+        "min_background_per_stratum": 10,
+        "min_positives_per_stratum": 10,
+        "n_strata_dropped_for_no_common_support": 0
+      }
+    },
+    {
+      "attempt": 2,
+      "qc": {
+        "all_passed": false,
+        "checks": {
+          "context_proportions": {
+            "exonic": {
+              "abs_diff": 0.005735152380768702,
+              "background": 0.10291540544846263,
+              "positive": 0.10865055782923133
+            },
+            "intronic": {
+              "abs_diff": 0.0057351523807689375,
+              "background": 0.8970845945515374,
+              "positive": 0.8913494421707685
+            }
+          },
+          "effective_sample_size_fraction": 0.55185,
+          "effective_sample_size_min": 0.5,
+          "max_context_proportion_diff": 0.00574,
+          "max_context_proportion_diff_max": 0.05,
+          "smd_gc": 0.05267,
+          "smd_gc_max_abs": 0.1,
+          "smd_log1p_tpm": 0.13752,
+          "smd_log1p_tpm_max_abs": 0.1
+        },
+        "clip_ceiling": 5.0,
+        "generated_at_utc": "2026-09-29T17:51:05+00:00",
+        "n_weighted_rows": 18831,
+        "note": "balance that remains after clipping is reported, not hidden",
+        "passed": {
+          "context_proportions": true,
+          "effective_sample_size": true,
+          "smd_gc": true,
+          "smd_log1p_tpm": false
+        },
+        "residual_diagnostics": {
+          "n_A": {
+            "smd": -1.86564
+          },
+          "n_C": {
+            "smd": 1.22953
+          },
+          "n_G": {
+            "smd": -1.35896
+          },
+          "n_U": {
+            "smd": 1.6919
+          },
+          "note": "diagnostics only per protocol section 7; they are not additional hidden matching requirements"
+        },
+        "residual_diagnostics_are_not_acceptance_criteria": true,
+        "weight_mean_after_normalisation": 1.0
+      },
+      "strata_merge_report": {
+        "attempt": 2,
+        "dropped_for_no_common_support": [],
+        "dropped_strata": [
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0",
+          "exonic|q0|t0"
+        ],
+        "merges": [
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q2|t0",
+            "to": "exonic|q1|t0"
+          },
+          {
+            "from": "exonic|q1|t0",
+            "to": "exonic|q0|t0"
+          },
+          {
+            "from": "exonic|q0|t1",
+            "to": "exonic|q0|t0"
+          }
+        ],
+        "min_background_per_stratum": 10,
+        "min_positives_per_stratum": 10,
+        "n_strata_dropped_for_no_common_support": 0
+      }
+    }
+  ],
+  "estimand_note": "If supported strata were dropped, the balanced condition targets class balance within the retained strata only; the estimand is correspondingly narrowed.",
+  "final_qc": {
+    "all_passed": false,
+    "checks": {
+      "context_proportions": {
+        "exonic": {
+          "abs_diff": 0.005735152380768702,
+          "background": 0.10291540544846263,
+          "positive": 0.10865055782923133
+        },
+        "intronic": {
+          "abs_diff": 0.0057351523807689375,
+          "background": 0.8970845945515374,
+          "positive": 0.8913494421707685
+        }
+      },
+      "effective_sample_size_fraction": 0.55185,
+      "effective_sample_size_min": 0.5,
+      "max_context_proportion_diff": 0.00574,
+      "max_context_proportion_diff_max": 0.05,
+      "smd_gc": 0.05267,
+      "smd_gc_max_abs": 0.1,
+      "smd_log1p_tpm": 0.13752,
+      "smd_log1p_tpm_max_abs": 0.1
+    },
+    "clip_ceiling": 5.0,
+    "generated_at_utc": "2026-09-29T17:51:05+00:00",
+    "n_weighted_rows": 18831,
+    "note": "balance that remains after clipping is reported, not hidden",
+    "passed": {
+      "context_proportions": true,
+      "effective_sample_size": true,
+      "smd_gc": true,
+      "smd_log1p_tpm": false
+    },
+    "residual_diagnostics": {
+      "n_A": {
+        "smd": -1.86564
+      },
+      "n_C": {
+        "smd": 1.22953
+      },
+      "n_G": {
+        "smd": -1.35896
+      },
+      "n_U": {
+        "smd": 1.6919
+      },
+      "note": "diagnostics only per protocol section 7; they are not additional hidden matching requirements"
+    },
+    "residual_diagnostics_are_not_acceptance_criteria": true,
+    "weight_mean_after_normalisation": 1.0
+  },
+  "fraction_excluded_unsupported": 0.02085,
+  "n_attempts": 3,
+  "retained_strata": 26,
+  "rows_excluded_unsupported": 401,
+  "strata_definitions": {
+    "context_categories": [
+      "exonic",
+      "intronic"
+    ],
+    "expression_tertile_edges": [
+      2.134166,
+      3.249211
+    ],
+    "fitted_on": "train",
+    "gc_quintile_edges": [
+      0.338308,
+      0.38806,
+      0.437811,
+      0.497512
+    ],
+    "n_train_rows": 19232
+  }
+}

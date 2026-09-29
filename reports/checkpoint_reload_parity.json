@@ -1,0 +1,8 @@
+{
+  "max_abs_diff": 0.0,
+  "method": "logits from the trained in-memory model vs the same model reloaded from its checkpoint on the same device and configuration",
+  "n_checked": 10,
+  "ok": true,
+  "tolerance": 1e-06,
+  "warnings": []
+}

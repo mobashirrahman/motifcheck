@@ -1,0 +1,67 @@
+{
+  "failures": [],
+  "generated_at_utc": "2026-09-29T18:46:13+00:00",
+  "n_failed": 0,
+  "n_passed": 5,
+  "n_tests": 5,
+  "suite": "core",
+  "synthetic": {
+    "all_passed": true,
+    "fixtures": [
+      {
+        "cnn_auroc": 0.9986,
+        "cnn_auroc_target": 0.95,
+        "cnn_passed": true,
+        "composition_gap_fraction_of_window": 0.00551,
+        "composition_gap_tolerance_fraction": 0.05,
+        "composition_matched": true,
+        "fixture": "true_order",
+        "max_abs_composition_difference": 1.108,
+        "mono_only_auroc": 0.5052,
+        "mono_only_near_chance": true,
+        "null_split_half_gap_same_class": 0.84,
+        "passed": true
+      },
+      {
+        "cnn_auroc": 1.0,
+        "fixture": "composition_only",
+        "mono_only_auroc": 1.0,
+        "mono_only_target": 0.9,
+        "note": "the audit must not attribute this to a planted order pattern; the composition model succeeding here is the expected result",
+        "passed": true
+      },
+      {
+        "cnn_auroc_on_shifted_test": 0.0,
+        "composition_model_collapses": true,
+        "fixture": "shortcut_shift",
+        "mono_only_auroc_on_shifted_test": 0.0,
+        "note": "no requirement that balancing solves this toy problem; the fixture only requires that the reporting pipeline exposes the change",
+        "passed": true,
+        "pipeline_reveals_shift": true
+      },
+      {
+        "chance_compatible": true,
+        "cnn_auroc": 0.5152,
+        "fixture": "random_label",
+        "mono_only_auroc": 0.4907,
+        "note": "tolerance reflects finite-sample uncertainty, not a requirement of exactly 0.5",
+        "passed": true
+      },
+      {
+        "fixture": "overfit_wiring",
+        "note": "checks wiring, not generalisation",
+        "passed": true,
+        "target": 0.99,
+        "train_accuracy": 1.0
+      }
+    ],
+    "n_failed": 0,
+    "n_passed": 5,
+    "n_tests": 5,
+    "note": "broad tolerances on fixed generated data; not per-commit gates (protocol section 10.2)",
+    "overfit_accuracy": 1.0
+  },
+  "warnings": [
+    "A flaky exact neural metric is not a per-commit gate (protocol section 10.2); tolerances are set on development fixtures"
+  ]
+}

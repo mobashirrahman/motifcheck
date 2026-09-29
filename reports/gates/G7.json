@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all_planned_results_reported": true,
+    "append_only_log_present": true,
+    "claim_level": "valid_demo",
+    "clean_environment_replay_passed": true,
+    "n_frozen_test_evaluations": 1
+  },
+  "code_version": "70033788cd5a3ab2af7f7012a60a1f9c8cc066d1",
+  "config_hash": null,
+  "data_hash": null,
+  "detail": {
+    "limitations": [
+      "**No processed control signal.** ENCSR981WKN releases no size-matched input, so B2's input-coverage feature was removed rather than zero-filled (amendment A2). Without a control, observed peaks cannot be separated from assay background the way RBPNet does.",
+      "**Positive ceiling below plan.** The plan asked for up to 10,000 positive windows; only 7,797 reproducible peaks exist and 5,352 survived filtering (amendment A1). Statistical power for the MPA endpoint is correspondingly limited.",
+      "**Background is assay-negative, not unbound.** Any false negative in the eCLIP dataset is learned as a genuine negative.",
+      "**One RBP, one cell type.** Results do not generalise to other RBPs or to HepG2. No transfer cohort was run.",
+      "**Five seeds are not five experiments.** Intervals are conditional on the trained seed pairs and describe test-component sampling only.",
+      "**Synthetic edits are out of distribution.** Order-disrupted controls change RNA structure and other motifs. The audit shows sensitivity to sequence order beyond preserved composition; it does not establish biological causality.",
+      "**The optional transformer (H3) was not run.** It is excluded by the frozen protocol and was deferred until after the core report, as the plan requires.",
+      "**Track A (SPIDRnet audit) was not performed.** The plan's two-day audit of the public SPIDRnet repository was out of scope for this run, so nothing here is a reproduction of, or a comparison against, its reported motif-correlation result."
+    ]
+  },
+  "evidence_paths": [
+    "reports/final_report.md",
+    "results/test_evaluation_log.jsonl"
+  ],
+  "gate": "G7",
+  "status": "pass",
+  "timestamp_utc": "2026-09-29T19:58:06+00:00",
+  "warnings": []
+}

@@ -1,0 +1,60 @@
+{
+  "method": "exact in silico mutagenesis",
+  "note": "measures model behaviour, not experimental mutation effects",
+  "panel": {
+    "per_stratum_target": 16,
+    "realized_total": 64,
+    "requested_total": 64,
+    "same_panel_for_all_models_and_seeds": true,
+    "selection_basis": "stratum + fixed hash; never model confidence",
+    "short_strata": [
+      "label1_motif_present",
+      "label1_motif_absent",
+      "label0_motif_present",
+      "label0_motif_absent"
+    ],
+    "strata_counts": {
+      "label0_motif_absent": {
+        "available": 1638,
+        "selected": 16
+      },
+      "label0_motif_present": {
+        "available": 1486,
+        "selected": 16
+      },
+      "label1_motif_absent": {
+        "available": 64,
+        "selected": 16
+      },
+      "label1_motif_present": {
+        "available": 690,
+        "selected": 16
+      }
+    }
+  },
+  "per_condition": {
+    "C0": {
+      "checkpoint": "results/training/C0_seed101.pt",
+      "median_max_abs_effect": 0.8718886375427246,
+      "n_panel_windows": 64,
+      "n_windows_with_any_effect": 64,
+      "selected": [
+        "W_1b9134fac13dbeebc2f1a0ccf2c0f24b",
+        "W_8d0cee6348c23ab4c40c93e52e549f2e"
+      ],
+      "selected_by": "largest max|exact substitution effect|, ties by window_id"
+    },
+    "C1": {
+      "checkpoint": "results/training/C1_seed101.pt",
+      "median_max_abs_effect": 0.9476121664047241,
+      "n_panel_windows": 64,
+      "n_windows_with_any_effect": 64,
+      "selected": [
+        "W_001b5ab93c6badec59dad2db6fb0fb49",
+        "W_8d0cee6348c23ab4c40c93e52e549f2e"
+      ],
+      "selected_by": "largest max|exact substitution effect|, ties by window_id"
+    }
+  },
+  "substitutions_per_sequence": 603
+}

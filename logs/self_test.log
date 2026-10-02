@@ -1,0 +1,7 @@
+.........................................................                [100%]
+[synthetic] true_order           passed=True
+[synthetic] composition_only     passed=True
+[synthetic] shortcut_shift       passed=True
+[synthetic] random_label         passed=True
+[synthetic] overfit_wiring       passed=True
+[G3] pass: synthetic fixtures 5/5

@@ -1,0 +1,33 @@
+{
+  "assay_type": "unknown",
+  "background_frequencies": {
+    "A": 0.25,
+    "C": 0.25,
+    "G": 0.25,
+    "U": 0.25
+  },
+  "cisbp_tf_id": "unknown",
+  "consensus": "CUUUUCU",
+  "database_build": "unknown",
+  "fitted_on": "train split only",
+  "interpretation": "scanning cutoff calibrated to training null sequences; NOT a biological binding probability",
+  "iupac_0.6": "CUUUUCU",
+  "length": 7,
+  "matrix_content": "position-major frequencies; each row sums to 1",
+  "matrix_strand": "+",
+  "motif_class": "unknown",
+  "motif_id": "M00249_2.00",
+  "n_null_scan_positions": 3750240,
+  "n_null_sequences": 19232,
+  "null_quantiles": {
+    "0.5": -1.24590265750885,
+    "0.9": 2.351393222808838,
+    "0.99": 5.138705253601074,
+    "0.999": 6.437131404876709
+  },
+  "pseudocount": 0.25,
+  "study": "unknown",
+  "study_id": "unknown",
+  "target_fpr_in_null": 0.01,
+  "threshold": 5.138705253601074
+}

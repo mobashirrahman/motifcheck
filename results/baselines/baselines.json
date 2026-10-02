@@ -1,0 +1,504 @@
+{
+  "generated_at_utc": "2026-09-29T17:50:25+00:00",
+  "models": {
+    "B0": {
+      "expected_random_ap_equals_prevalence": 0.19686,
+      "kind": "constant_prevalence",
+      "n_features": 0,
+      "prevalence_train": 0.1968594009983361,
+      "selected_C": null,
+      "validation_metrics": {
+        "auroc": 0.5,
+        "average_precision": 0.19435136428913355,
+        "brier": 0.15658520173622073,
+        "log_loss": 0.4924912838247464,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    },
+    "B1": {
+      "exact_invariant_to_mono_preserving_edits": true,
+      "expected_parameters": 21,
+      "feature_names": [
+        "mono_A",
+        "mono_C",
+        "mono_G",
+        "mono_U"
+      ],
+      "grid": [
+        {
+          "C": 0.01,
+          "validation_metrics": {
+            "auroc": 0.961244947299714,
+            "average_precision": 0.9175053321336951,
+            "brier": 0.046465243590141904,
+            "log_loss": 0.17522218010286625,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 0.1,
+          "validation_metrics": {
+            "auroc": 0.9615244739484091,
+            "average_precision": 0.9172023805546085,
+            "brier": 0.04562740150917854,
+            "log_loss": 0.1731895949085274,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 1.0,
+          "validation_metrics": {
+            "auroc": 0.9615778913446257,
+            "average_precision": 0.9171586701993149,
+            "brier": 0.04557663047183349,
+            "log_loss": 0.17323604873693385,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 10.0,
+          "validation_metrics": {
+            "auroc": 0.9615866722864694,
+            "average_precision": 0.9171579790046643,
+            "brier": 0.04557224705952358,
+            "log_loss": 0.17324585862644157,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 100.0,
+          "validation_metrics": {
+            "auroc": 0.9615866722864695,
+            "average_precision": 0.9171561447372509,
+            "brier": 0.04557181647854632,
+            "log_loss": 0.1732468970657347,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        }
+      ],
+      "kind": "composition_mono_only",
+      "n_features": 4,
+      "n_parameters": 5,
+      "selected_C": 0.01,
+      "validation_metrics": {
+        "auroc": 0.961244947299714,
+        "average_precision": 0.9175053321336951,
+        "brier": 0.046465243590141904,
+        "log_loss": 0.17522218010286625,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    },
+    "B1d": {
+      "exact_invariant_to_mono_preserving_edits": false,
+      "expected_parameters": null,
+      "feature_names": [
+        "mono_A",
+        "mono_C",
+        "mono_G",
+        "mono_U",
+        "dino_AA",
+        "dino_AC",
+        "dino_AG",
+        "dino_AU",
+        "dino_CA",
+        "dino_CC",
+        "dino_CG",
+        "dino_CU",
+        "dino_GA",
+        "dino_GC",
+        "dino_GG",
+        "dino_GU",
+        "dino_UA",
+        "dino_UC",
+        "dino_UG",
+        "dino_UU"
+      ],
+      "grid": [
+        {
+          "C": 0.01,
+          "validation_metrics": {
+            "auroc": 0.9685682527974616,
+            "average_precision": 0.9354515229457233,
+            "brier": 0.03818641751566349,
+            "log_loss": 0.14691171102831468,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 0.1,
+          "validation_metrics": {
+            "auroc": 0.968975468975469,
+            "average_precision": 0.9351216931799315,
+            "brier": 0.03805769984673104,
+            "log_loss": 0.14632658165049403,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 1.0,
+          "validation_metrics": {
+            "auroc": 0.9690083975073833,
+            "average_precision": 0.9349815203278079,
+            "brier": 0.038078993856761716,
+            "log_loss": 0.14641945214851368,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 10.0,
+          "validation_metrics": {
+            "auroc": 0.9690109586154212,
+            "average_precision": 0.9349527285330739,
+            "brier": 0.03808173199905415,
+            "log_loss": 0.1464316127908618,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 100.0,
+          "validation_metrics": {
+            "auroc": 0.9690120562331517,
+            "average_precision": 0.93495239917311,
+            "brier": 0.03808201243042073,
+            "log_loss": 0.14643286007511636,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        }
+      ],
+      "kind": "composition_mono_plus_dinucleotide",
+      "n_features": 20,
+      "n_parameters": 21,
+      "note": "dinucleotides change under audit edits; response is expected",
+      "selected_C": 0.01,
+      "validation_metrics": {
+        "auroc": 0.9685682527974616,
+        "average_precision": 0.9354515229457233,
+        "brier": 0.03818641751566349,
+        "log_loss": 0.14691171102831468,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    },
+    "B2": {
+      "amendment": "A2: input-coverage feature removed (no released control signal)",
+      "expected_parameters": "<50",
+      "feature_names": [
+        "mono_A",
+        "mono_C",
+        "mono_G",
+        "mono_U",
+        "dino_AA",
+        "dino_AC",
+        "dino_AG",
+        "dino_AU",
+        "dino_CA",
+        "dino_CC",
+        "dino_CG",
+        "dino_CU",
+        "dino_GA",
+        "dino_GC",
+        "dino_GG",
+        "dino_GU",
+        "dino_UA",
+        "dino_UC",
+        "dino_UG",
+        "dino_UU",
+        "context_exonic",
+        "context_intronic",
+        "log1p_tpm"
+      ],
+      "grid": [
+        {
+          "C": 0.01,
+          "validation_metrics": {
+            "auroc": 0.9745652702042155,
+            "average_precision": 0.9449215115475769,
+            "brier": 0.03512057603430498,
+            "log_loss": 0.1340184891962617,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 0.1,
+          "validation_metrics": {
+            "auroc": 0.9749080928087014,
+            "average_precision": 0.9444453028825077,
+            "brier": 0.03507692893945922,
+            "log_loss": 0.13391328513527292,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 1.0,
+          "validation_metrics": {
+            "auroc": 0.9749351673793863,
+            "average_precision": 0.9443052464517704,
+            "brier": 0.03511889401600114,
+            "log_loss": 0.13417771910929105,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 10.0,
+          "validation_metrics": {
+            "auroc": 0.9749399237228851,
+            "average_precision": 0.94429976553744,
+            "brier": 0.03512399867465146,
+            "log_loss": 0.1342098950971052,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 100.0,
+          "validation_metrics": {
+            "auroc": 0.9749417530857692,
+            "average_precision": 0.9443007983630552,
+            "brier": 0.035124519083898804,
+            "log_loss": 0.1342131758975432,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        }
+      ],
+      "kind": "composition_plus_context",
+      "n_features": 23,
+      "n_parameters": 24,
+      "selected_C": 0.01,
+      "uses_extra_information": true,
+      "validation_metrics": {
+        "auroc": 0.9745652702042155,
+        "average_precision": 0.9449215115475769,
+        "brier": 0.03512057603430498,
+        "log_loss": 0.1340184891962617,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    },
+    "B3": {
+      "expected_parameters": 1345,
+      "feature_names": [
+        "k3_AAA",
+        "k3_AAC",
+        "k3_AAG",
+        "k3_AAU",
+        "k3_ACA",
+        "k3_ACC",
+        "k3_ACG",
+        "k3_ACU",
+        "k3_AGA",
+        "k3_AGC",
+        "k3_AGG",
+        "k3_AGU",
+        "k3_AUA",
+        "k3_AUC",
+        "k3_AUG",
+        "k3_AUU",
+        "k3_CAA",
+        "k3_CAC",
+        "k3_CAG",
+        "k3_CAU",
+        "k3_CCA",
+        "k3_CCC",
+        "k3_CCG",
+        "k3_CCU",
+        "k3_CGA",
+        "k3_CGC",
+        "k3_CGG",
+        "k3_CGU",
+        "k3_CUA",
+        "k3_CUC",
+        "k3_CUG",
+        "k3_CUU",
+        "k3_GAA",
+        "k3_GAC",
+        "k3_GAG",
+        "k3_GAU",
+        "k3_GCA",
+        "k3_GCC",
+        "k3_GCG",
+        "k3_GCU",
+        "k3_GGA",
+        "k3_GGC",
+        "k3_GGG",
+        "k3_GGU",
+        "k3_GUA",
+        "k3_GUC",
+        "k3_GUG",
+        "k3_GUU",
+        "k3_UAA",
+        "k3_UAC"
+      ],
+      "grid": [
+        {
+          "C": 0.01,
+          "validation_metrics": {
+            "auroc": 0.9718676916952779,
+            "average_precision": 0.9394796981466466,
+            "brier": 0.0349182118018439,
+            "log_loss": 0.1408487636477684,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 0.1,
+          "validation_metrics": {
+            "auroc": 0.969604038062456,
+            "average_precision": 0.9342116026217725,
+            "brier": 0.03705520515113883,
+            "log_loss": 0.15358917592138463,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 1.0,
+          "validation_metrics": {
+            "auroc": 0.967270868640037,
+            "average_precision": 0.9299163389055111,
+            "brier": 0.03864780797453917,
+            "log_loss": 0.1648036483712381,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 10.0,
+          "validation_metrics": {
+            "auroc": 0.9646636606575755,
+            "average_precision": 0.9238245806821375,
+            "brier": 0.04146943576866197,
+            "log_loss": 0.18394516718189205,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 100.0,
+          "validation_metrics": {
+            "auroc": 0.9628262485767557,
+            "average_precision": 0.9195695576781434,
+            "brier": 0.0431735686262505,
+            "log_loss": 0.1984537942092651,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        }
+      ],
+      "kind": "kmer_3_4_5_normalized",
+      "n_features": 1344,
+      "n_parameters": 1345,
+      "selected_C": 0.01,
+      "validation_metrics": {
+        "auroc": 0.9718676916952779,
+        "average_precision": 0.9394796981466466,
+        "brier": 0.0349182118018439,
+        "log_loss": 0.1408487636477684,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    },
+    "B4": {
+      "expected_parameters": 2,
+      "feature_names": [
+        "motif_max_score",
+        "motif_hit_count"
+      ],
+      "grid": [
+        {
+          "C": 0.01,
+          "validation_metrics": {
+            "auroc": 0.8752094620502329,
+            "average_precision": 0.705443158728618,
+            "brier": 0.09492454937879853,
+            "log_loss": 0.3161363169925339,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 0.1,
+          "validation_metrics": {
+            "auroc": 0.8753382491972755,
+            "average_precision": 0.7057920636127105,
+            "brier": 0.09464733211985714,
+            "log_loss": 0.31548585455913436,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 1.0,
+          "validation_metrics": {
+            "auroc": 0.8753382491972755,
+            "average_precision": 0.7057920636127105,
+            "brier": 0.0946250617279383,
+            "log_loss": 0.31544720861340086,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 10.0,
+          "validation_metrics": {
+            "auroc": 0.8753382491972755,
+            "average_precision": 0.7057920636127105,
+            "brier": 0.09462291939092415,
+            "log_loss": 0.3154437063371331,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        },
+        {
+          "C": 100.0,
+          "validation_metrics": {
+            "auroc": 0.8753382491972755,
+            "average_precision": 0.7057920636127105,
+            "brier": 0.09462270582681127,
+            "log_loss": 0.31544335964781023,
+            "n": 4178,
+            "prevalence": 0.194351
+          }
+        }
+      ],
+      "kind": "motif_reference",
+      "limitation": "B4 is not independent evidence about its own input; it is reported as a known motif-sensitive reference for label prediction only",
+      "n_features": 2,
+      "n_parameters": 3,
+      "selected_C": 0.1,
+      "validation_metrics": {
+        "auroc": 0.8753382491972755,
+        "average_precision": 0.7057920636127105,
+        "brier": 0.09464733211985714,
+        "log_loss": 0.31548585455913436,
+        "n": 4178,
+        "prevalence": 0.194351
+      }
+    }
+  },
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "regularization_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "selected_by": "validation_average_precision"
+}

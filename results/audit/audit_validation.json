@@ -1,0 +1,749 @@
+{
+  "audit_panel": {
+    "exploratory": false,
+    "exploratory_reason": null,
+    "model_confidence_used": false,
+    "motif_class": "unknown",
+    "motif_id": "M00249_2.00",
+    "n_background": 343,
+    "n_components": 155,
+    "n_positive": 157,
+    "n_windows": 500,
+    "per_component_cap": 5,
+    "selection_basis": [
+      "label",
+      "annotation",
+      "motif_score",
+      "fixed_hash"
+    ],
+    "threshold": 5.138705253601074
+  },
+  "control_panel": {
+    "all_controls_preserve_mono_and_length": true,
+    "generated_at_utc": "2026-09-29T19:52:21+00:00",
+    "max_controls_per_instance": 20,
+    "max_dinucleotide_l1_change": 14.0,
+    "mean_dinucleotide_l1_change": 4.422196261682243,
+    "min_controls_per_instance": 5,
+    "n_controls_outside": 8560,
+    "n_controls_target": 8560,
+    "n_motif_instances": 500,
+    "n_uninformative_windows": 72,
+    "n_windows_considered": 500,
+    "n_windows_with_controls": 428
+  },
+  "generated_at_utc": "2026-09-29T19:52:22+00:00",
+  "ism_method": "exact in silico mutagenesis (603 substitutions per 201-nt sequence)",
+  "ism_panel": {
+    "per_stratum_target": 16,
+    "realized_total": 64,
+    "requested_total": 64,
+    "same_panel_for_all_models_and_seeds": true,
+    "selection_basis": "stratum + fixed hash; never model confidence",
+    "short_strata": [
+      "label1_motif_present",
+      "label1_motif_absent",
+      "label0_motif_present",
+      "label0_motif_absent"
+    ],
+    "strata_counts": {
+      "label0_motif_absent": {
+        "available": 1818,
+        "selected": 16
+      },
+      "label0_motif_present": {
+        "available": 1548,
+        "selected": 16
+      },
+      "label1_motif_absent": {
+        "available": 63,
+        "selected": 16
+      },
+      "label1_motif_present": {
+        "available": 749,
+        "selected": 16
+      }
+    }
+  },
+  "motif": {
+    "assay_type": "unknown",
+    "background_frequencies": {
+      "A": 0.25,
+      "C": 0.25,
+      "G": 0.25,
+      "U": 0.25
+    },
+    "cisbp_tf_id": "unknown",
+    "consensus": "CUUUUCU",
+    "database_build": "unknown",
+    "iupac_0.6": "CUUUUCU",
+    "length": 7,
+    "matrix_content": "position-major frequencies; each row sums to 1",
+    "matrix_strand": "+",
+    "motif_class": "unknown",
+    "motif_id": "M00249_2.00",
+    "pseudocount": 0.25,
+    "study": "unknown",
+    "study_id": "unknown"
+  },
+  "motif_threshold": {
+    "assay_type": "unknown",
+    "background_frequencies": {
+      "A": 0.25,
+      "C": 0.25,
+      "G": 0.25,
+      "U": 0.25
+    },
+    "cisbp_tf_id": "unknown",
+    "consensus": "CUUUUCU",
+    "database_build": "unknown",
+    "fitted_on": "train split only",
+    "interpretation": "scanning cutoff calibrated to training null sequences; NOT a biological binding probability",
+    "iupac_0.6": "CUUUUCU",
+    "length": 7,
+    "matrix_content": "position-major frequencies; each row sums to 1",
+    "matrix_strand": "+",
+    "motif_class": "unknown",
+    "motif_id": "M00249_2.00",
+    "n_null_scan_positions": 3750240,
+    "n_null_sequences": 19232,
+    "null_quantiles": {
+      "0.5": -1.24590265750885,
+      "0.9": 2.351393222808838,
+      "0.99": 5.138705253601074,
+      "0.999": 6.437131404876709
+    },
+    "pseudocount": 0.25,
+    "study": "unknown",
+    "study_id": "unknown",
+    "target_fpr_in_null": 0.01,
+    "threshold": 5.138705253601074
+  },
+  "p2_panel_preview": {
+    "bin_source": "training-derived edges (train split only)",
+    "bins": {
+      "context_categories": [
+        "exonic",
+        "intronic"
+      ],
+      "expression_tertile_edges": [
+        2.134166,
+        3.249211
+      ],
+      "fitted_on": "train",
+      "gc_quintile_edges": [
+        0.338308,
+        0.38806,
+        0.437811,
+        0.497512
+      ],
+      "n_train_rows": 19232
+    },
+    "interpretation": "diagnostic panel; prevalence differs from P1 by design",
+    "matching_variables": [
+      "context",
+      "gc_quintile",
+      "expression_tertile"
+    ],
+    "n_background": 808,
+    "n_input_rows": 4178,
+    "n_positive": 808,
+    "n_selected": 1616,
+    "n_unmatched_positives": 4,
+    "ratio": "1:1 positive:background"
+  },
+  "protocol_sha256": "d60baba1cfb141ac16912b2819976ab4b3b4388b417b966840ba262ab0d6a98c",
+  "split": "validation",
+  "tism": {
+    "checks": [
+      {
+        "max_abs_exact": 1.161303997039795,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.84657,
+        "status": "ok",
+        "window_id": "W_7810d795e0b8551f1bf6eef8265dd23d"
+      },
+      {
+        "max_abs_exact": 2.64509654045105,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.94483,
+        "status": "ok",
+        "window_id": "W_d9f9b0a6379e2a748c2415268b27f322"
+      },
+      {
+        "max_abs_exact": 1.4791679382324219,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.93436,
+        "status": "ok",
+        "window_id": "W_e11e6b2bbcd9397f71c2ff5ae26b9623"
+      },
+      {
+        "max_abs_exact": 1.811279535293579,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.9301,
+        "status": "ok",
+        "window_id": "W_01d92c350971c570530b5ceed582c78f"
+      },
+      {
+        "max_abs_exact": 0.7669501304626465,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.91207,
+        "status": "ok",
+        "window_id": "W_aa5b63c2b273a21ecd97fd5cc90d6654"
+      },
+      {
+        "max_abs_exact": 0.4943361282348633,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9625,
+        "spearman": 0.8297,
+        "status": "ok",
+        "window_id": "W_40464fc924844a96d99ab70dfcb20b2e"
+      },
+      {
+        "max_abs_exact": 1.3204708099365234,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.92611,
+        "status": "ok",
+        "window_id": "W_bfc27a9503f4535b200d533a13651bc5"
+      },
+      {
+        "max_abs_exact": 0.6248691082000732,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.8875,
+        "spearman": 0.794,
+        "status": "ok",
+        "window_id": "W_b4751eff54ef8e89b3829d611b85c4ee"
+      },
+      {
+        "max_abs_exact": 0.9396066665649414,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.90818,
+        "status": "ok",
+        "window_id": "W_04cd15c27b7885fc91c5a9cfe668d5b6"
+      },
+      {
+        "max_abs_exact": 1.5877304077148438,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.91939,
+        "status": "ok",
+        "window_id": "W_a880025755f4021be2a3877e062ec5df"
+      },
+      {
+        "max_abs_exact": 1.3978922367095947,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.89046,
+        "status": "ok",
+        "window_id": "W_edf434a5020711d7531ea06d3b3ba3f2"
+      },
+      {
+        "max_abs_exact": 0.7534847259521484,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.89374,
+        "status": "ok",
+        "window_id": "W_ce71442947876190a67c135b485e5ff2"
+      },
+      {
+        "max_abs_exact": 0.7340283393859863,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.83917,
+        "status": "ok",
+        "window_id": "W_18fdc33e54ea5ff603748c3975cac12e"
+      },
+      {
+        "max_abs_exact": 0.6126737594604492,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9625,
+        "spearman": 0.82102,
+        "status": "ok",
+        "window_id": "W_25c74e25b70656aa8ded75744a2383f7"
+      },
+      {
+        "max_abs_exact": 0.7183752059936523,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.8875,
+        "spearman": 0.87176,
+        "status": "ok",
+        "window_id": "W_002d3bf11b424ea610b08d284357e477"
+      },
+      {
+        "max_abs_exact": 0.5356025695800781,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.89628,
+        "status": "ok",
+        "window_id": "W_b75f68181f7a6388655ffa37774acc6c"
+      },
+      {
+        "max_abs_exact": 0.5927567481994629,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.83847,
+        "status": "ok",
+        "window_id": "W_2b0d8d44c130c294bf1393f0f9253ef0"
+      },
+      {
+        "max_abs_exact": 0.6791706085205078,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.8731,
+        "status": "ok",
+        "window_id": "W_57f766b6f785adf81eba83836053e297"
+      },
+      {
+        "max_abs_exact": 1.3699402809143066,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.90179,
+        "status": "ok",
+        "window_id": "W_3e7493b9f14b99597018a209eb12a0b8"
+      },
+      {
+        "max_abs_exact": 0.8692646026611328,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.85164,
+        "status": "ok",
+        "window_id": "W_060a2108853b23b796a280190043e2f8"
+      },
+      {
+        "max_abs_exact": 1.6644598245620728,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.89672,
+        "status": "ok",
+        "window_id": "W_0373be3335bae813c82d042cab479220"
+      },
+      {
+        "max_abs_exact": 0.7856426239013672,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.92212,
+        "status": "ok",
+        "window_id": "W_803bde9e32641e2bcdf47297ed71bd43"
+      },
+      {
+        "max_abs_exact": 0.6006355285644531,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.94412,
+        "status": "ok",
+        "window_id": "W_238b6829e3d1cfe7eeb6444b290b9344"
+      },
+      {
+        "max_abs_exact": 1.3941943645477295,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.91329,
+        "status": "ok",
+        "window_id": "W_bd86a82c6261601df931a5faa89a8c0d"
+      },
+      {
+        "max_abs_exact": 1.0646333694458008,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.87217,
+        "status": "ok",
+        "window_id": "W_ec09f73c86fb20e7be7998737d7d2e9b"
+      },
+      {
+        "max_abs_exact": 1.9074840545654297,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.93565,
+        "status": "ok",
+        "window_id": "W_073d10f49733755f4c8fa07ce189d206"
+      },
+      {
+        "max_abs_exact": 0.8067469596862793,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.87227,
+        "status": "ok",
+        "window_id": "W_874b8ef23b3646999f4615f20befe528"
+      },
+      {
+        "max_abs_exact": 1.4764986038208008,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.92086,
+        "status": "ok",
+        "window_id": "W_f312b59f91711cba77a1471713cfc6d7"
+      },
+      {
+        "max_abs_exact": 0.6507959365844727,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.87254,
+        "status": "ok",
+        "window_id": "W_12c85fc925870d104b55b5b67d5a35e9"
+      },
+      {
+        "max_abs_exact": 1.3738715648651123,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.94811,
+        "status": "ok",
+        "window_id": "W_28e895eb411d2dd8d81c29a44cb8eec4"
+      },
+      {
+        "max_abs_exact": 0.8049612045288086,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.82903,
+        "status": "ok",
+        "window_id": "W_1d8be3291e6c16505ed93e5fc475808a"
+      },
+      {
+        "max_abs_exact": 0.666130542755127,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.95,
+        "spearman": 0.80071,
+        "status": "ok",
+        "window_id": "W_2bde6443f34fae7cf2c7d2c1b054c04d"
+      },
+      {
+        "max_abs_exact": 0.8067464828491211,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.77537,
+        "status": "ok",
+        "window_id": "W_2ece3f36ed6eb33131d4eb2c8d9d4025"
+      },
+      {
+        "max_abs_exact": 0.6051111221313477,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.95,
+        "spearman": 0.80606,
+        "status": "ok",
+        "window_id": "W_21f85343d91ee22fdb44a6a08799ab33"
+      },
+      {
+        "max_abs_exact": 0.8087654113769531,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9625,
+        "spearman": 0.84196,
+        "status": "ok",
+        "window_id": "W_741cff5f4784445810694241274a1c85"
+      },
+      {
+        "max_abs_exact": 0.7706129550933838,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.82795,
+        "status": "ok",
+        "window_id": "W_c9def031a03db1c962edbda2424973af"
+      },
+      {
+        "max_abs_exact": 0.46235084533691406,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.95,
+        "spearman": 0.8315,
+        "status": "ok",
+        "window_id": "W_8db5f342d3891e6e96fbecc9993f50b3"
+      },
+      {
+        "max_abs_exact": 0.895421028137207,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9625,
+        "spearman": 0.73647,
+        "status": "ok",
+        "window_id": "W_ed2042ec4aa5b9fead51750bb3dbeeb2"
+      },
+      {
+        "max_abs_exact": 1.8940343856811523,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.91355,
+        "status": "ok",
+        "window_id": "W_c18807abb4eea7350b0b8903a05595b7"
+      },
+      {
+        "max_abs_exact": 1.3487625122070312,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.86817,
+        "status": "ok",
+        "window_id": "W_b6cdaf43f90e6829ebd6c3fabca4df42"
+      },
+      {
+        "max_abs_exact": 1.2257065773010254,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.80326,
+        "status": "ok",
+        "window_id": "W_8002b4360710e257301a7084abdb63d0"
+      },
+      {
+        "max_abs_exact": 1.2188162803649902,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.87671,
+        "status": "ok",
+        "window_id": "W_09e8e2d5e5f38c961d3f384607740501"
+      },
+      {
+        "max_abs_exact": 1.189841866493225,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.925,
+        "spearman": 0.75347,
+        "status": "ok",
+        "window_id": "W_a62a75c548c2cbf7c90caff4a86a8a7d"
+      },
+      {
+        "max_abs_exact": 0.7162318229675293,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.8625,
+        "spearman": 0.75527,
+        "status": "ok",
+        "window_id": "W_06cdf1117abac08d04b19ad597aa51c5"
+      },
+      {
+        "max_abs_exact": 1.8108172416687012,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.93641,
+        "status": "ok",
+        "window_id": "W_0e9e8d6524a3e43398a510f44cb999cf"
+      },
+      {
+        "max_abs_exact": 1.9300107955932617,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.88056,
+        "status": "ok",
+        "window_id": "W_009b70cec79c51d8c46e27236f88f42c"
+      },
+      {
+        "max_abs_exact": 0.7046093940734863,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.91318,
+        "status": "ok",
+        "window_id": "W_e1be8204c4d381de913b4392cd083f31"
+      },
+      {
+        "max_abs_exact": 0.7151516675949097,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.875,
+        "spearman": 0.66648,
+        "status": "ok",
+        "window_id": "W_a8afc80014d7d7d9bf94c5facbd6557f"
+      },
+      {
+        "max_abs_exact": 0.5897493362426758,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9375,
+        "spearman": 0.8386,
+        "status": "ok",
+        "window_id": "W_47dd7a73c538e2428ef0ddf9a96c95d3"
+      },
+      {
+        "max_abs_exact": 1.200305700302124,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.78174,
+        "status": "ok",
+        "window_id": "W_13f4c015e4c73512c55d64ede87c42ba"
+      },
+      {
+        "max_abs_exact": 1.5427157878875732,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.81687,
+        "status": "ok",
+        "window_id": "W_11f2c07457ec67357d8dd063a3951038"
+      },
+      {
+        "max_abs_exact": 0.6041545867919922,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.95,
+        "spearman": 0.79548,
+        "status": "ok",
+        "window_id": "W_7209340836c33b955c2aa404bc76e45b"
+      },
+      {
+        "max_abs_exact": 1.4453010559082031,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9375,
+        "spearman": 0.82597,
+        "status": "ok",
+        "window_id": "W_004d593e24c2bc8451cfa1ba32167c2c"
+      },
+      {
+        "max_abs_exact": 0.8422834873199463,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.88521,
+        "status": "ok",
+        "window_id": "W_6b7fade56578ca1db1adce5a92b4e0fe"
+      },
+      {
+        "max_abs_exact": 0.604957103729248,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.8375,
+        "spearman": 0.79388,
+        "status": "ok",
+        "window_id": "W_e30bb330f577b7bf5ac7a8f904346b3a"
+      },
+      {
+        "max_abs_exact": 0.7739753723144531,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9625,
+        "spearman": 0.78526,
+        "status": "ok",
+        "window_id": "W_005cf35c4faaec6d6015aaf441a3bdd9"
+      },
+      {
+        "max_abs_exact": 1.1106808185577393,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.8875,
+        "spearman": 0.70251,
+        "status": "ok",
+        "window_id": "W_c59a8d96b3c0bfcedb2c645974ca9631"
+      },
+      {
+        "max_abs_exact": 0.5099325180053711,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.9875,
+        "spearman": 0.88547,
+        "status": "ok",
+        "window_id": "W_54032df68bc576348c9a9b3c5c29895b"
+      },
+      {
+        "max_abs_exact": 1.6793348789215088,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.90488,
+        "status": "ok",
+        "window_id": "W_0044d77125c36431aef8e683b25d8992"
+      },
+      {
+        "max_abs_exact": 0.7324419021606445,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.7625,
+        "spearman": 0.56422,
+        "status": "ok",
+        "window_id": "W_ab370727a252c2478bda3d99426fa6d2"
+      },
+      {
+        "max_abs_exact": 1.0127668380737305,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.90233,
+        "status": "ok",
+        "window_id": "W_55154e8b024faf4f08c600a6203c7949"
+      },
+      {
+        "max_abs_exact": 1.4092183113098145,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.925,
+        "spearman": 0.85664,
+        "status": "ok",
+        "window_id": "W_56d9629057c1946a5dbac287c13c7001"
+      },
+      {
+        "max_abs_exact": 1.362684965133667,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 0.975,
+        "spearman": 0.81394,
+        "status": "ok",
+        "window_id": "W_fa0ca90a0c4910ea85629bbba2e1cf6c"
+      },
+      {
+        "max_abs_exact": 1.306522250175476,
+        "n_in_top_decile": 80,
+        "n_substitutions": 804,
+        "sign_agreement_top_decile": 1.0,
+        "spearman": 0.9088,
+        "status": "ok",
+        "window_id": "W_0005b9fba0f4249e533ee00508b13a6c"
+      }
+    ],
+    "decision": "use approximation",
+    "median_sign_agreement_top_decile": 0.9875,
+    "median_spearman": 0.871965,
+    "note": "if the approximation fails, the model is not changed to make it pass",
+    "thresholds": {
+      "check_split": "validation",
+      "enabled": true,
+      "min_median_spearman": 0.8,
+      "min_sign_agreement_top10pct": 0.8,
+      "on_failure": "retain_exact_ism"
+    },
+    "usable_in_headline_figures": true
+  }
+}

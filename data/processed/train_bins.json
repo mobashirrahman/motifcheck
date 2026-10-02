@@ -1,0 +1,18 @@
+{
+  "context_categories": [
+    "exonic",
+    "intronic"
+  ],
+  "expression_tertile_edges": [
+    2.134166,
+    3.249211
+  ],
+  "fitted_on": "train",
+  "gc_quintile_edges": [
+    0.338308,
+    0.38806,
+    0.437811,
+    0.497512
+  ],
+  "n_train_rows": 19232
+}

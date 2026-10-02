@@ -1,0 +1,18 @@
+[data] loading peaks
+[data] IDR reproducible peaks: 7797
+[data] loading GENCODE genes and exons
+[data] genes: 78691
+[data] loading K562 expression
+[data] genes with quantified expression: 58580 (5632 transcript rows unmapped)
+[data] expressed genes (TPM >= 1.0): 12855
+[data] opening genome
+[data] extracting positive windows
+[data] positives after sequence/bounds filters: 7797
+[data] collapsed overlapping positives: 1562 removed, 6235 loci
+[data] sampling background windows from expressed gene spans
+[data] usable expressed-gene sequence: 709.0 Mb of valid window starts over 102899 segments
+[data] background windows: 24940
+[data] extracting sequences and assigning gene context
+[data] excluded 3887 ambiguous-gene/context windows (3887 windows overlapped zero or >1 expressed gene)
+[data] dataset: 27288 rows (5352 positive, 21936 background)
+[build-data] 27288 rows -> data/processed/dataset.parquet

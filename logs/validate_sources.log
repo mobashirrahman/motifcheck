@@ -1,0 +1,28 @@
+[acquire] peaks                        <- ENCFF907HNN
+[acquire] ok         peaks
+[acquire] peaks_replicate_1            <- ENCFF594PWG
+[acquire] ok         peaks_replicate_1
+[acquire] peaks_replicate_2            <- ENCFF894KLP
+[acquire] ok         peaks_replicate_2
+[acquire] genome                       <- hg38.fa.gz
+[acquire] ok         genome
+[acquire] annotation                   <- gencode.v49.annotation.gtf.gz
+[acquire] ok         annotation
+[acquire] expression                   <- ENCFF255BPX
+[acquire] ok         expression
+[acquire] motif_primary                <- M00249_2.00
+[acquire] ok         motif_primary
+[acquire] motif_secondary              <- M00250_2.00
+[acquire] ok         motif_secondary
+[acquire] motif_inferred_sensitivity   <- M12970_2.00
+[acquire] ok         motif_inferred_sensitivity
+[acquire] manifest -> data/source_manifest.json  (0 failure(s))
+[G1] pass: 9/9 sources ok
+[G1] warning: peaks_replicate_1: no portal md5 published; sha256 recorded instead
+[G1] warning: peaks_replicate_2: no portal md5 published; sha256 recorded instead
+[G1] warning: genome: no portal md5 published; sha256 recorded instead
+[G1] warning: annotation: no portal md5 published; sha256 recorded instead
+[G1] warning: expression: no portal md5 published; sha256 recorded instead
+[G1] warning: motif_primary: no portal md5 published; sha256 recorded instead
+[G1] warning: motif_secondary: no portal md5 published; sha256 recorded instead
+[G1] warning: motif_inferred_sensitivity: no portal md5 published; sha256 recorded instead

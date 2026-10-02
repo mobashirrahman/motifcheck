@@ -1,0 +1,8 @@
+[baselines] motif M00249_2.00 null threshold 5.139 (3750240 null positions)
+[baselines] B0 prevalence=0.1969 val AP=0.1944
+[baselines] B1 C=0.01 val AP=0.9175 AUROC=0.9612 nfeat=4
+[baselines] B1d C=0.01 val AP=0.9355 AUROC=0.9686 nfeat=20
+[baselines] B2 C=0.01 val AP=0.9449 AUROC=0.9746 nfeat=23
+[baselines] B3 C=0.01 val AP=0.9395 AUROC=0.9719 nfeat=1344
+[baselines] B4 C=0.1 val AP=0.7058 AUROC=0.8753 nfeat=2
+[baselines] wrote results/baselines/baselines.json

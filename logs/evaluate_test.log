@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<repo>/src/motifcheck/cli.py", line 1083, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "<repo>/src/motifcheck/cli.py", line 1079, in main
+    return cmds[cmd](argv[1:])
+           ^^^^^^^^^^^^^^^^^^^
+  File "<repo>/src/motifcheck/cli.py", line 622, in cmd_evaluate
+    tg = execution_gates_ok()
+         ^^^^^^^^^^^^^^^^^^
+NameError: name 'execution_gates_ok' is not defined

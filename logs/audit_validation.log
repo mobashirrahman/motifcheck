@@ -1,0 +1,6 @@
+[audit] motif panel: 500 windows / 155 components
+[audit] controls: 8560 target / 8560 outside; 72 uninformative windows
+[audit] ISM panel: 64 windows
+<python-env>/lib/python3.12/site-packages/torch/autograd/graph.py:825: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at ../aten/src/ATen/cuda/CublasHandlePool.cpp:135.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[audit] TISM agreement: median spearman=0.871965 sign=0.9875 -> usable

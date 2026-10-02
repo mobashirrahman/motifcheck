@@ -1,0 +1,3 @@
+[splits] scanning 27288 sequences for near duplicates (>= 0.9 identity over >= 0.8 of shorter)
+[splits] 6848 components (largest 130 windows)
+[G2] pass  zero_overlap=True support_ok=True

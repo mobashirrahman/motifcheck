@@ -201,6 +201,36 @@ not motif-order recognition. That is the question worth carrying forward.
 | G6 final lock | pass | code, config, data, checkpoints hashed |
 | G7 release | pass | every planned result reported |
 
+## What is and is not in this repository
+
+Everything needed to audit the reported numbers is committed:
+
+| path | what |
+|---|---|
+| `src/`, `tests/`, `workflow/` | implementation, 57 tests, Snakemake rules |
+| `configs/protocol.yaml` | frozen protocol, seeds, thresholds, 5 amendments |
+| `data/source_manifest.json` | every source asset: URL, bytes, SHA-256, retrieval date, license |
+| `data/processed/` | the exact dataset and split files that produced the results |
+| `results/` | all 10 checkpoints, baselines, control panels, `test/evaluation.json` |
+| `logs/` | execution logs for every pipeline stage, including gate decisions |
+| `reports/` | final report, data card, model card, figures, tables, per-gate records |
+| `environment.lock.txt` | fully pinned dependency set |
+
+**One deliberate exception: `data/external/` (7.2 GB) is not committed.** It is the
+hg38 FASTA, GENCODE GTF, ENCODE eCLIP files and CisBP-RNA motif PWMs. GitHub's
+hard per-file limit is 100 MB and the two reference files alone are ~3.1 GB each.
+
+This is not a provenance gap. `data/source_manifest.json` pins every asset by URL,
+byte size and SHA-256, and one command re-fetches and verifies all of them,
+failing loudly on any mismatch:
+
+```bash
+motifcheck validate-sources   # ~4 GB, exits non-zero if any checksum differs
+```
+
+Bulk reproducible public reference data is verified by checksum rather than
+version-controlled; the *results* are version-controlled.
+
 ## What this project does not claim
 
 The claim level is decided by prespecified rules in the protocol and is never

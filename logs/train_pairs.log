@@ -1,0 +1,20 @@
+[weights] attempt 0: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 0: merged sparse stratum exonic|q2|t0 -> exonic|q1|t0
+[weights] attempt 0: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 0: merged sparse stratum exonic|q0|t1 -> exonic|q0|t0
+[weights] attempt 0: ESS fraction 0.552, SMD(gc) +0.053, SMD(tpm) +0.138, max ctx diff 0.006
+[weights] attempt 1: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 1: merged sparse stratum exonic|q2|t0 -> exonic|q1|t0
+[weights] attempt 1: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 1: merged sparse stratum exonic|q0|t1 -> exonic|q0|t0
+[weights] attempt 1: ESS fraction 0.552, SMD(gc) +0.053, SMD(tpm) +0.138, max ctx diff 0.006
+[weights] attempt 2: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 2: merged sparse stratum exonic|q2|t0 -> exonic|q1|t0
+[weights] attempt 2: merged sparse stratum exonic|q1|t0 -> exonic|q0|t0
+[weights] attempt 2: merged sparse stratum exonic|q0|t1 -> exonic|q0|t0
+[weights] attempt 2: ESS fraction 0.552, SMD(gc) +0.053, SMD(tpm) +0.138, max ctx diff 0.006
+[train] C0 seed=17
+[train] C1 seed=17
+[train] seed 17  C0 val AP=0.9495  C1 val AP=0.9511  paired_match=True
+[train] C0 seed=29
+[train] C1 seed=29
